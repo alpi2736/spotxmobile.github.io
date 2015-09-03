@@ -1,70 +1,81 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>SpotX Mobile by spotxmobile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPOTX MOBILE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row head-row title-row">
+            <div class="col-sm-12">
+                <img class="img-auto" src="imgs/spotx_mobile_logo.png" style="margin-bottom:5px;"/><br/>
+                <p>on github</p>
+            </div>
+        </div>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>SpotX Mobile</h1>
-        <p class="view"><a href="https://github.com/spotxmobile">View Repositories</a></p>
+        <div class="row">
+            <!-- MAIN CONTENT -->
+            <div class="col-sm-8">
+                <div class="content-box">
+                    <h2 class="h2-top">SpotX Mobile SDKs</h2>
+                    <p>Want to monetize your mobile app with video ads? SpotX makes it easy;
+                    Check out SpotX's mobile SDKs for both iOS and Android here on Github.</p>
+                    <h5>Android</h5>
+                    <ul class="unstyled-list"><li><a href="https://github.com/spotxmobile/spotx-sdk-android">spotx-sdk-android</a></li></ul>
+                    <h5>iOS</h5>
+                    <ul class="unstyled-list"><li><a href="https://github.com/spotxmobile/spotx-sdk-ios">spotx-sdk-ios</a></li></ul>
+                </div>
 
-      </header>
-      <section>
-        <h2><a id="spotx-sdk" class="anchor" href="#spotx-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>SpotX Mobile SDK</h2>
-        <p>
-            Want to monetize your mobile app with video ads? Check out our mobile SDKs for both iOS and Android here on Github.
-            <ul>
-                <li><strong>Android</strong>
-                    <ul>
-                        <li>SDK - <a href="https://github.com/spotxmobile/spotx-sdk-android">Android Mobile SDK</a></li>
-                        <li>Test App - <a href="https://github.com/spotxmobile/spotx-demo-android">Android SDK Test App</a></li>
-                    </ul>
-                </li>
-                <li><strong>iOS</strong>
-                    <ul>
-                        <li>SDK - <a href="https://github.com/spotxmobile/spotx-sdk-ios">iOS Mobile SDK</a></li>
-                        <li>Test App - <a href="https://github.com/spotxmobile/spotx-demo-swift">iOS SDK Test App</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
+                <div class="content-box">
+                    <h2><img src="imgs/mopub_logo.png" width="110" style="display:inline-block;" /> Integration</h2>
+                    <p>Are you currently using MoPub's mobile SDK in you app? You can also utilize our mopub plugins for easy integration with SpotX.</p>
+                    <h5>Android</h5>
+                    <ul class="unstyled-list"><li><a href="https://github.com/spotxmobile/spotx-mopub-android">spotx-mopub-android</a></li></ul>
+                    <h5>iOS</h5>
+                    <ul class="unstyled-list"><li><a href="https://github.com/spotxmobile/spotx-mopub-ios">spotx-mopub-ios</a></li></ul>
+                </div>
+            </div>
 
-        <br/><br/>
+            <!-- RIGHT SIDEBAR -->
+            <div class="col-sm-3 col-sm-offset-1 r-sidebar">
+                <h4>Android Repositories</h4>
+                <ul class="sidebar-list">
+                    <li><a href="https://github.com/spotxmobile/spotx-sdk-android">Android SDK</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-demo-android">SDK Demo App</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-demo-vpaid/tree/master/android">VPAID Demo App</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-mopub-android">MoPub Plugin</a></li>
+                </ul>
 
-        <h2><a id="mopub-integration" class="anchor" href="#mopub-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>MoPub Mobile SDK Integration</h2>
-        <p>
-            Currently using MoPub's Mobile SDK in you app? Check out our plugins for easy integration with SpotX.
-            <ul>
-                <li><strong>Android</strong>
-                    <ul><li>
-                        Learn how to use our <a href="https://github.com/spotxmobile/spotx-mopub-android">SpotX MoPub Android Plugin</a> to
-                        integrate with <a href="https://github.com/mopub/mopub-android-sdk">MoPub's Mobile Android SDK</a>
-                    </li></ul>
-                </li>
-                <li><strong>iOS</strong>
-                    <ul><li>
-                        Learn how to use our <a href="https://github.com/spotxmobile/spotx-mopub-ios">SpotX MoPub iOS Plugin</a>
-                        to integrate with <a href="https://github.com/mopub/mopub-ios-sdk">MoPub's Mobile iOS SDK</a>
-                    </li></ul>
-                </li>
-            </ul>
-        </p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+                <h4>iOS Repositories</h4>
+                <ul class="sidebar-list">
+                    <li><a href="https://github.com/spotxmobile/spotx-sdk-ios">iOS SDK</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-demo-swift">SDK Demo App</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-demo-vpaid/tree/master/ios">VPAID Demo App</a></li>
+                    <li><a href="https://github.com/spotxmobile/spotx-mopub-ios">MoPub Plugin</a></li>
+                    <li><a href="https://github.com/spotxmobile/EASI-Tester-iOS">EASI Test App</a></li>
+                </ul>
+                <hr/>
+                <ul class="sidebar-list">
+                    <li><a href="https://github.com/spotxmobile">View all repositories</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-
-  </body>
+    <footer class="footer">
+        <div class="container">
+            <p class="foot-text">
+                &copy; 2015 SpotX Inc.
+                <a href="http://www.spotxchange.com/privacy-policy/">privacy policy</a>
+                <a href="http://www.spotxchange.com/contact/">contact us</a>
+                <a href="http://www.spotxchange.com/careers/">careers</a>
+            </p>
+        </div>
+    </footer>
+</body>
 </html>
