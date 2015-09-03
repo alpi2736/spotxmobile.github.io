@@ -7,7 +7,7 @@ body{
     color: #222;
     font-family: Georgia, Times, 'Times New Roman', serif !important;
     margin-bottom: 30px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 h1, h2, h3, h4, h5, h6, a{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
@@ -28,7 +28,7 @@ a:hover, a:active{
     margin: 0 auto;
 }
 .head-row{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .img-auto{
     max-width: 100%;
@@ -47,7 +47,11 @@ a:hover, a:active{
     text-align: center;
 }
 .content-box{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+}
+.content-box h2{
+    border-bottom: 1px solid #E7E7E7;
+    padding-bottom: 2px;
 }
 .r-sidebar{
     padding: 10px 20px 15px 20px !important;
