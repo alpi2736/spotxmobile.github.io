@@ -1,16 +1,16 @@
-html {
+html{
     position: relative;
     min-height: 100%;
 }
 body{
     background-color: #FFF;
     color: #222;
-    font-family: Georgia, Times, 'Times New Roman', serif !important;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 50px;
 }
 h1, h2, h3, h4, h5, h6, a{
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
     color: #231f20 !important;
 }
 p{
@@ -20,7 +20,7 @@ a:link, a:visited{
     color: #1b9dd0 !important;
 }
 a:hover, a:active{
-    color: #75a637 !important;
+    text-decoration: underline;
 }
 .container{
     width: auto;
@@ -36,11 +36,7 @@ a:hover, a:active{
     width: auto\9; /* ie8 */
 }
 .title-row{
-    /*
-    background-image: url('imgs/spotx_mobile_logo.png');
-    background-position: bottom left;
-    background-size: cover;
-    */
+
 }
 .center-row{
     margin: 0 auto;
@@ -50,8 +46,13 @@ a:hover, a:active{
     margin-bottom: 30px;
 }
 .content-box h2{
-    border-bottom: 1px solid #E7E7E7;
-    padding-bottom: 2px;
+    font-size: 28px;
+    padding:13px;
+    background: #8ec641;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    color:#FFF !important;
+    font-weight: 400;
 }
 .r-sidebar{
     padding: 10px 20px 15px 20px !important;
@@ -92,7 +93,6 @@ a:hover, a:active{
     margin: 5px auto;
     color:#999;
     font-size: 13px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     text-align: center;
 }
 .foot-text a{
