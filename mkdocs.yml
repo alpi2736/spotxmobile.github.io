@@ -1,0 +1,6 @@
+site_name: SPOTX SDK Documentation
+# pages:
+#   'spotx-sdk-android.md'
+# - iOS: spotx-sdk-ios.md
+# - AVPlayer: spotx-sdk-avplayer.md
+theme: readthedocs
