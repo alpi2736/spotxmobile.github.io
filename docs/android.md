@@ -22,14 +22,15 @@ ways:
   or Android Studio - declare that jar as a file dependency.
   * Using Gradle, include the following in your build.gradle file:
 
-  ```
+```
   repositories {
       jcenter()
   }
   dependencies {
         compile 'com.spotxchange:spotx-sdk-android:3.+'
   }
-  ```
+```
+
 You can always download the latest version of the SpotX SDK from [Bintray](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view);
 the latest version of the SpotX Demo App is also available on our [GitHub Repository](https://github.com/spotxmobile/spotx-demo-android).
 
@@ -59,6 +60,7 @@ dependencies {
 ```
 
 4. Add the Google Play Services meta tag with the `<application>` tags.
+
 ```xml
 <!-- Example application -->
 <application

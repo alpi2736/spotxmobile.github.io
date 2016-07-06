@@ -1,4 +1,5 @@
 site_name: SPOTX SDK Documentation
+theme_dir: spotx_theme
 # pages:
 #   'spotx-sdk-android.md'
 # - iOS: spotx-sdk-ios.md
