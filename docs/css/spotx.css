@@ -1,0 +1,33 @@
+/* see http://ux.spotxchange.com/ */
+
+.palette-primary-green {
+  background: #74a636;   /* SpotXchange Dark Green */
+}
+
+
+.palette-primary-green .header,
+.palette-primary-green .footer {
+  background:#8ec641;  /* SpotXchange Light Green */
+}
+
+.palette-primary-green .article a,
+.palette-primary-green .article code,
+.palette-primary-green .article h1,
+.palette-primary-green .article h2,
+.palette-primary-green .drawer .toc a.current {
+  color:#74a636;  /* SpotXchange Dark Green */
+}
+
+
+.palette-primary-green .article table th {
+  background:#74a636;
+}
+
+/* Search Results */
+.palette-primary-green .results .meta {
+    background:#74a636;
+}
+
+/*.repo {
+  visibility:collapse;
+}*/

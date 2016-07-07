@@ -25,7 +25,7 @@ static let CHANNEL_ID = "85394"
 
 SpotX.adForChannel(CHANNEL_ID, params:nil completion:{
 	(ad:SPXAdController?, error:NSError?) -> void in
-  	
+
 	  if let _ = ad {
 	    // do something with the ad -- show it now, or save for later
 	  }
@@ -61,7 +61,7 @@ var ad : SPXAdController;
 // Inserts the ad at the front of the play queue
 ad.preRoll(player)
 
-// Appends the ad to end end of the play queue 
+// Appends the ad to end end of the play queue
 ad.postRoll(player)
 
 // Inserts the ad at the third position in the play queue
@@ -69,7 +69,7 @@ ad.midRoll(player, 2)
 
 // Client-side Ad Stitching: Plays an ad immediately using the given player.
 ad.play(player, completion:{
-	// callback invoked when the ad has finished 
+	// callback invoked when the ad has finished
 	// and the original video content is restored
 })
 ```
