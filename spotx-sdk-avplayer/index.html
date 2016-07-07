@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>AVPlayer - SPOTX Mobile SDKs</title>
+      
+      
+      
+        <link rel="canonical" href="https://spotxmobile.github.io/spotx-sdk-avplayer/">
+      
+      
+    
+    <meta property="og:url" content="https://spotxmobile.github.io/spotx-sdk-avplayer/">
+    <meta property="og:title" content="SPOTX Mobile SDKs">
+    <meta property="og:image" content="https://spotxmobile.github.io/spotx-sdk-avplayer//../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SPOTX Mobile SDKs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../images/logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../css/spotx.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-cyan">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Apple tvOS <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        AVPlayer
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          SPOTX Mobile SDKs
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Android" href="../spotx-sdk-android/">
+      Android
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="iOS" href="../spotx-sdk-ios/">
+      iOS
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Apple tvOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="AVPlayer" href="./">
+      AVPlayer
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Prerequisites" href="#prerequisites">
+                Prerequisites
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Requesting an Ad" href="#requesting-an-ad">
+                Requesting an Ad
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Presenting an Ad in a TVML App" href="#presenting-an-ad-in-a-tvml-app">
+                Presenting an Ad in a TVML App
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Customizing the Ad Request" href="#customizing-the-ad-request">
+                Customizing the Ad Request
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="TVML" href="../spotx-sdk-tvml/">
+      TVML
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Adapters</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="MoPub Android" href="../spotx-mopub-android/">
+      MoPub Android
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="MoPub iOS" href="../spotx-mopub-ios/">
+      MoPub iOS
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="spotx-sdk-for-avplayer">SpotX SDK for AvPlayer<a class="headerlink" href="#spotx-sdk-for-avplayer" title="Permanent link">#</a></h1>
+<p>The <em>SpotX SDK for AVPlayer</em> provides seamless integration with Apple&rsquo;s AVKit framework.</p>
+<ul>
+<li>Ad Preloading</li>
+<li>Flexible Placement Options (pre-/post-/mid-roll, standalone)</li>
+<li>Client-side Ad Stitching</li>
+<li>Access to underlying AVPlayerItem for advanced ad placements</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<ul>
+<li>Xcode 7</li>
+<li>Add SpotX.framework to your Xcode project</li>
+<li>A SpotX publisher account<ul>
+<li><a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">Apply to become a SpotX Publisher</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="requesting-an-ad">Requesting an Ad<a class="headerlink" href="#requesting-an-ad" title="Permanent link">#</a></h2>
+<div class="code"><pre><span class="kd">import</span> <span class="nc">SpotX</span>
+
+<span class="kd">static</span> <span class="kd">let</span> <span class="nv">CHANNEL_ID</span> <span class="p">=</span> <span class="s">&quot;85394&quot;</span>
+
+<span class="n">SpotX</span><span class="p">.</span><span class="n">adForChannel</span><span class="p">(</span><span class="n">CHANNEL_ID</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span><span class="kc">nil</span> <span class="n">completion</span><span class="p">:{</span>
+    <span class="p">(</span><span class="n">ad</span><span class="p">:</span><span class="n">SPXAdController</span><span class="p">?,</span> <span class="n">error</span><span class="p">:</span><span class="bp">NSError</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">void</span> <span class="k">in</span>
+
+      <span class="k">if</span> <span class="kd">let</span> <span class="nv">_</span> <span class="p">=</span> <span class="n">ad</span> <span class="p">{</span>
+        <span class="c1">// do something with the ad -- show it now, or save for later</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="k">if</span> <span class="kd">let</span> <span class="nv">_</span> <span class="p">=</span> <span class="n">error</span> <span class="p">{</span>
+        <span class="c1">// underlying transmission error</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// no ad was available</span>
+      <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="presenting-an-ad-in-a-tvml-app">Presenting an Ad in a TVML App<a class="headerlink" href="#presenting-an-ad-in-a-tvml-app" title="Permanent link">#</a></h2>
+<ol>
+<li>Load the SpotX SDK. Don&rsquo;t worry, there are no additional dependencies.</li>
+<li>Load up a SpotX Ad with your publisher channel ID.</li>
+<li>Add any additional parameters you wish to collect (see below).</li>
+<li>Pass a callback to receive the SpotXAdPlayer.</li>
+<li>Add event listeners to the player, if you are interested in Ad lifecycle events.</li>
+<li>Present the Ad by calling <code>player.standalone().play()</code>.</li>
+</ol>
+<div class="code"><pre><span class="kd">import</span> <span class="nc">SpotX</span>
+
+<span class="kd">var</span> <span class="nv">player</span> <span class="p">:</span> <span class="bp">AVQueuePlayer</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nv">ad</span> <span class="p">:</span> <span class="n">SPXAdController</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="c1">// Inserts the ad at the front of the play queue</span>
+<span class="n">ad</span><span class="p">.</span><span class="n">preRoll</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+
+<span class="c1">// Appends the ad to end end of the play queue</span>
+<span class="n">ad</span><span class="p">.</span><span class="n">postRoll</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+
+<span class="c1">// Inserts the ad at the third position in the play queue</span>
+<span class="n">ad</span><span class="p">.</span><span class="n">midRoll</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">// Client-side Ad Stitching: Plays an ad immediately using the given player.</span>
+<span class="n">ad</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">completion</span><span class="p">:{</span>
+    <span class="c1">// callback invoked when the ad has finished</span>
+    <span class="c1">// and the original video content is restored</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<h2 id="customizing-the-ad-request">Customizing the Ad Request<a class="headerlink" href="#customizing-the-ad-request" title="Permanent link">#</a></h2>
+<p>You may specify additional parameters to refine your Ad request query with SpotX. The values for the following parameters should adhere to the <a href="http://www.iab.com/wp-content/uploads/2015/06/OpenRTBAPISpecificationVersion2_2.pdf">OpenRTB API Specification 2.2</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app[name]</td>
+<td>Application name (may be masked at publisher’s request).</td>
+</tr>
+<tr>
+<td>app[domain]</td>
+<td>Domain of the application (e.g.,“mygame.foo.com”).</td>
+</tr>
+<tr>
+<td>app[cat]</td>
+<td>Array of IAB content categories for the overall application.</td>
+</tr>
+<tr>
+<td>app[ver]</td>
+<td>Application version.</td>
+</tr>
+<tr>
+<td>app[privacypolicy]</td>
+<td>Specifies whether the app has a privacy policy. “1” means there is a policy and “0” means there is not.</td>
+</tr>
+<tr>
+<td>app[storeurl]</td>
+<td>For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request.</td>
+</tr>
+<tr>
+<td>app[content][language]</td>
+<td>Language of the content. Use alpha-2/ISO 639-1 codes.</td>
+</tr>
+<tr>
+<td>app[content][contentrating]</td>
+<td>Content rating (e.g., MPAA)</td>
+</tr>
+<tr>
+<td>device[dnt]</td>
+<td>If “0”, then do not track Is set to false, if “1”, then do no track is set to true in browser.</td>
+</tr>
+<tr>
+<td>device[geo][lon]</td>
+<td>Longitude from -180 to 180. West is negative. This should only be passed if known to be accurate.</td>
+</tr>
+<tr>
+<td>device[geo][lat]</td>
+<td>Latitude from -90 to 90. South is negative. This should only be passed if known to be accurate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong> Additional parameters (sometimes referred to as custom taxonomy) may be provided and will be stored along with your ad request.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<div class="code"><pre><span class="kd">let</span> <span class="nv">params</span> <span class="p">=</span> <span class="p">[</span>
+  <span class="s">&quot;app[ver]&quot;</span><span class="p">:</span> <span class="s">&quot;1.0&quot;</span><span class="p">,</span>
+  <span class="s">&quot;my_custom_param&quot;</span><span class="p">:</span> <span class="s">&quot;my_custom_value&quot;</span>
+<span class="p">]</span>
+
+<span class="n">SpotX</span> <span class="n">adForChannel</span><span class="p">(</span><span class="n">CHANNEL_ID</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span><span class="n">params</span> <span class="n">completion</span><span class="p">:{</span>
+    <span class="p">(</span><span class="n">ad</span><span class="p">:</span><span class="n">SPXAdController</span><span class="p">?,</span> <span class="n">error</span><span class="p">:</span><span class="bp">NSError</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">void</span> <span class="k">in</span>
+      <span class="c1">//...</span>
+<span class="p">})</span>
+</pre></div>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 SpotXchange, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../spotx-sdk-ios/" title="iOS">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                iOS
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../spotx-sdk-tvml/" title="TVML">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                TVML
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

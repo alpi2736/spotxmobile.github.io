@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>iOS - SPOTX Mobile SDKs</title>
+      
+      
+      
+        <link rel="canonical" href="https://spotxmobile.github.io/spotx-sdk-ios/">
+      
+      
+    
+    <meta property="og:url" content="https://spotxmobile.github.io/spotx-sdk-ios/">
+    <meta property="og:title" content="SPOTX Mobile SDKs">
+    <meta property="og:image" content="https://spotxmobile.github.io/spotx-sdk-ios//../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SPOTX Mobile SDKs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../images/logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../css/spotx.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-cyan">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        iOS
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          SPOTX Mobile SDKs
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Android" href="../spotx-sdk-android/">
+      Android
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="iOS" href="./">
+      iOS
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Preliminary" href="#preliminary">
+                Preliminary
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What You Need" href="#what-you-need">
+                What You Need
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Getting Started" href="#getting-started">
+                Getting Started
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Using the SDK" href="#using-the-sdk">
+                Using the SDK
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Apple tvOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="AVPlayer" href="../spotx-sdk-avplayer/">
+      AVPlayer
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="TVML" href="../spotx-sdk-tvml/">
+      TVML
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Adapters</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="MoPub Android" href="../spotx-mopub-android/">
+      MoPub Android
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="MoPub iOS" href="../spotx-mopub-ios/">
+      MoPub iOS
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="spotx-sdk-quick-start">SpotX SDK - Quick Start<a class="headerlink" href="#spotx-sdk-quick-start" title="Permanent link">#</a></h1>
+<h4 id="preliminary"><em>Preliminary</em><a class="headerlink" href="#preliminary" title="Permanent link">#</a></h4>
+<p>You&rsquo;ll need to apply to become a SpotX publisher if you haven&rsquo;t already. You&rsquo;ll receive the SpotXchange&rsquo;s SDK, a publisher channel ID, and an account to log in to <a href="https://publisher.spotxchange.com/">SpotXchange&rsquo;s Publisher Tools</a>.</p>
+<ul>
+<li><a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">Apply to become a SpotX Publisher</a></li>
+</ul>
+<h2 id="what-you-need">What You Need<a class="headerlink" href="#what-you-need" title="Permanent link">#</a></h2>
+<ul>
+<li>An IAB Category number that best categorizes your app (ex: &ldquo;IAB1&rdquo;)<ul>
+<li><a href="http://www.iab.net/media/file/OpenRTB_API_Specification_Version2.0_FINAL.PDF">IAB Specification</a> (section 6.1 page 54)</li>
+<li><a href="https://gist.github.com/crowdmatt/5040911">IAB Category List</a></li>
+</ul>
+</li>
+<li>Your App domain<ul>
+<li>ex: http://www.example.com</li>
+</ul>
+</li>
+<li>Your App Store URL<ul>
+<li>ex: https://itunes.apple.com/us/app/example/id123456789</li>
+</ul>
+</li>
+<li>Xcode 6</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h2>
+<h3 id="installation-with-cocoapods">Installation with CocoaPods<a class="headerlink" href="#installation-with-cocoapods" title="Permanent link">#</a></h3>
+<p>Installation with <a href="https://cocoapods.org/">CocoaPods</a> is an alternative to downloading the SDK. CocoaPods is a dependency manager for iOS and Mac apps, which automates and simplifies the process of using 3rd-party libraries in your projects.</p>
+<div class="code"><pre><span class="n">pod</span> <span class="s1">&#39;SpotX-SDK&#39;</span>
+</pre></div>
+
+
+<h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">#</a></h3>
+<p>Download the latest SDK from the SpotX <a href="https://github.com/spotxmobile/spotx-sdk-ios">Github Repository</a>.</p>
+<p>The SpotX SDK makes use of many iOS core frameworks. Add the following frameworks to your app:</p>
+<ul>
+<li>AdManager.framework</li>
+<li>AdSupport.framework</li>
+<li>CoreData.framework</li>
+<li>CoreGraphics.framework</li>
+<li>CoreLocation.framework</li>
+<li>CoreTelephony.framework</li>
+<li>EventKit.framework</li>
+<li>Foundation.framework</li>
+<li>SystemConfiguration.framework</li>
+<li>Security.framework</li>
+<li>UIKit.framework</li>
+</ul>
+<p>Under <strong>Build Settings &gt; Other Linker Flags</strong> set the following flag:</p>
+<div class="code"><pre>-all_load
+</pre></div>
+
+
+<h2 id="using-the-sdk">Using the SDK<a class="headerlink" href="#using-the-sdk" title="Permanent link">#</a></h2>
+<h3 id="initialize-the-spotx-sdk">Initialize the SpotX SDK<a class="headerlink" href="#initialize-the-spotx-sdk" title="Permanent link">#</a></h3>
+<div class="code"><pre><span class="c1">// File: AppDelegate.m</span>
+
+<span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
+
+<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span> 
+<span class="p">{</span>
+    <span class="c1">// Required: Initialize SpotX SDK</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span> <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span> <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span> 
+        <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.spotxchange.com&quot;</span>
+            <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789&quot;</span><span class="p">];</span>
+
+    <span class="c1">// Optional: Set default channel id</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultChannelID</span><span class="p">:</span><span class="s">&quot;110681&quot;</span><span class="p">];</span>
+
+    <span class="c1">// Optional: Configure default settings</span>
+    <span class="kt">id</span><span class="o">&lt;</span><span class="n">SpotXAdSettings</span><span class="o">&gt;</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[</span><span class="n">SpotX</span> <span class="n">defaultSettings</span><span class="p">];</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">useHTTPS</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">useNativeBrowser</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">allowCalendar</span> <span class="o">=</span> <span class="m">@NO</span><span class="p">;</span>
+
+    <span class="c1">// Optional: Configure default custom parameters (Custom Taxonomy)</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultParameters</span><span class="p">:</span><span class="l">@{</span>
+        <span class="s">@&quot;custom_param&quot;</span><span class="o">:</span> <span class="s">@&quot;custom_value&quot;</span>
+    <span class="l">}</span><span class="p">];</span>
+
+    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div>
+
+
+<h3 id="show-an-ad">Show an Ad<a class="headerlink" href="#show-an-ad" title="Permanent link">#</a></h3>
+<div class="code"><pre><span class="c1">// File: ViewController.m</span>
+
+<span class="cp">#import &quot;ViewController.h&quot;</span>
+
+<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
+
+
+<span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">SpotXAdDelegate</span><span class="o">&gt;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">strong</span><span class="p">)</span> <span class="n">SpotXAdView</span> <span class="o">*</span><span class="n">adView</span><span class="p">;</span>
+
+<span class="k">@end</span>
+
+
+<span class="k">@implementation</span> <span class="nc">ViewController</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+
+    <span class="c1">// NOTE: We create a SpotXView and call -startLoading right away </span>
+    <span class="c1">//       so it is cached when we are ready to show it.</span>
+    <span class="n">_adView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SpotXView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+     <span class="n">_adView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+     <span class="p">[</span><span class="n">_adView</span> <span class="n">startLoading</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showAd</span>
+<span class="p">{</span>
+    <span class="c1">// Show the Ad. If the ad is still loading, it may take a </span>
+    <span class="c1">// few seconds for the video to start.</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">adView</span> <span class="n">show</span><span class="p">];</span>
+<span class="p">}</span>
+
+
+<span class="cp">#pragma mark - SpotXAdViewDelegate</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentViewController:</span><span class="p">(</span><span class="bp">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewControllerToPresent</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nb">self</span> <span class="nl">presentViewController</span><span class="p">:</span><span class="n">viewControllerToPresent</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adLoaded</span>
+<span class="p">{</span>
+  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Ad is cached and ready to play&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 SpotXchange, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../spotx-sdk-android/" title="Android">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Android
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../spotx-sdk-avplayer/" title="AVPlayer">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                AVPlayer
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
