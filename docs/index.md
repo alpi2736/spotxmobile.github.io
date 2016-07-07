@@ -1,1 +1,0 @@
-## SPOTX SDK Documentation
