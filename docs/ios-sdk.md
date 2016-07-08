@@ -1,7 +1,7 @@
-# SpotX SDK - Quick Start #
+# SpotX iOS SDK Quick Start
 
 
-#### *Preliminary* ####
+## Prerequisites 
 You'll need to apply to become a SpotX publisher if you haven't already. You'll receive the SpotXchange's SDK, a publisher channel ID, and an account to log in to [SpotXchange's Publisher Tools](https://publisher.spotxchange.com/).
 
 - [Apply to become a SpotX Publisher](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/)
@@ -58,27 +58,27 @@ Under **Build Settings > Other Linker Flags** set the following flag:
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Required: Initialize SpotX SDK
-	[SpotX initializeWithApiKey:nil category:@"IAB1" section:@"Fiction" 
+	[SpotX initializeWithApiKey:nil category:@"IAB1" section:@"Fiction"
 		domain:@"www.spotxchange.com"
 			url:@"https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789"];
-	
+
 	// Optional: Set default channel id
 	[SpotX setDefaultChannelID:"110681"];
-	
+
 	// Optional: Configure default settings
 	id<SpotXAdSettings> settings = [SpotX defaultSettings];
 	settings.useHTTPS = @YES;
 	settings.useNativeBrowser = @YES;
 	settings.allowCalendar = @NO;
-	
+
 	// Optional: Configure default custom parameters (Custom Taxonomy)
 	[SpotX setDefaultParameters:@{
 		@"custom_param": @"custom_value"
 	}];
-	
+
 	return YES;
 }
 
@@ -106,8 +106,8 @@ Under **Build Settings > Other Linker Flags** set the following flag:
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-    
-    // NOTE: We create a SpotXView and call -startLoading right away 
+
+    // NOTE: We create a SpotXView and call -startLoading right away
     //       so it is cached when we are ready to show it.
     _adView = [[SpotXView alloc] initWithFrame:self.view.bounds];
 	 _adView.delegate = self;
@@ -116,7 +116,7 @@ Under **Build Settings > Other Linker Flags** set the following flag:
 
 - (void)showAd
 {
-	// Show the Ad. If the ad is still loading, it may take a 
+	// Show the Ad. If the ad is still loading, it may take a
 	// few seconds for the video to start.
 	[self.adView show];
 }

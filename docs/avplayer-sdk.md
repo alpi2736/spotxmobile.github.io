@@ -1,5 +1,4 @@
-SpotX SDK for AvPlayer
-=========================
+# SpotX SDK for AvPlayer
 
 The *SpotX SDK for AVPlayer* provides seamless integration with Apple's AVKit framework.
 

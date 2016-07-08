@@ -31,3 +31,13 @@
 /*.repo {
   visibility:collapse;
 }*/
+
+img {
+    text-align:center;
+    margin: 0 auto;
+    display: block;
+}
+
+.previous, .next, .footer, .copyright {
+    display: none;
+}

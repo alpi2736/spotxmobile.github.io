@@ -1,20 +1,23 @@
 remote_branch: master
 
-site_name: SPOTX Mobile SDKs
+site_name: SpotX Mobile
 site_url: https://spotxmobile.github.io
 site_favicon: images/favicon.ico
 copyright: 'Copyright (c) 2016 SpotXchange, Inc.'
 
 pages:
   - Home: 'index.md'
-  - Android: 'sdk-android.md'
-  - iOS: 'spotx-sdk-ios.md'
+  - Android:
+    - SDK Quick Start: 'android-sdk.md'
+    - Advanced Documentation: 'android-sdk-advanced.md'
+  - iOS:
+    - SDK Quick Start: 'ios-sdk.md'
   - Apple tvOS:
-    - AVPlayer: 'spotx-sdk-avplayer.md'
-    - TVML: 'spotx-sdk-tvml.md'
+    - AVPlayer: 'avplayer-sdk.md'
+    - TVML: 'tvml-sdk.md'
   - Adapters:
-    - MoPub Android: 'spotx-mopub-android.md'
-    - MoPub iOS: 'spotx-mopub-ios.md'
+    - MoPub Android: 'android-mopub-adapter.md'
+    - MoPub iOS: 'ios-mopub-adapter.md'
 
 
 theme: material
@@ -30,6 +33,8 @@ extra:
   font:
       text: 'Open Sans'
       code: 'Roboto Mono'
+  author:
+    github: 'spotxmobile'
 
 markdown_extensions:
   - admonition

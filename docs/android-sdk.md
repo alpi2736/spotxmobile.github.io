@@ -1,4 +1,4 @@
-# SpotX Android SDK Documentation
+# SpotX Android SDK Quick Start
 
 Example code and tutorial for displaying SpotX video ads in Android apps.
 
@@ -218,7 +218,7 @@ protected void onCreate(Bundle savedInstanceState) {
   }
 ```
 
-## Advanced Usage
+## Event Observer
 There may be times where you would like to listen to events. Events include:
 * `onGroupStart()` - triggers before any ads starts playing
 * `onStart(SpotXAd ad)` - triggers when a single ad starts playing
