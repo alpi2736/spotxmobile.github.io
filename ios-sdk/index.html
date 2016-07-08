@@ -348,8 +348,7 @@
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h2>
 <h3 id="installation-with-cocoapods">Installation with CocoaPods<a class="headerlink" href="#installation-with-cocoapods" title="Permanent link">#</a></h3>
 <p>Installation with <a href="https://cocoapods.org/">CocoaPods</a> is an alternative to downloading the SDK. CocoaPods is a dependency manager for iOS and Mac apps, which automates and simplifies the process of using 3rd-party libraries in your projects.</p>
-<div class="code"><pre><span class="n">pod</span> <span class="s1">&#39;SpotX-SDK&#39;</span>
-</pre></div>
+<pre class="code"><code class="language-ruby">pod 'SpotX-SDK'</code></pre>
 
 
 <h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">#</a></h3>
@@ -369,97 +368,94 @@
 <li>UIKit.framework</li>
 </ul>
 <p>Under <strong>Build Settings &gt; Other Linker Flags</strong> set the following flag:</p>
-<div class="code"><pre>-all_load
-</pre></div>
+<pre class="code"><code>-all_load</code></pre>
 
 
 <h2 id="using-the-sdk">Using the SDK<a class="headerlink" href="#using-the-sdk" title="Permanent link">#</a></h2>
 <h3 id="initialize-the-spotx-sdk">Initialize the SpotX SDK<a class="headerlink" href="#initialize-the-spotx-sdk" title="Permanent link">#</a></h3>
-<div class="code"><pre><span class="c1">// File: AppDelegate.m</span>
+<pre class="code"><code class="language-objective-c">// File: AppDelegate.m
 
-<span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
-<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;AdManager/SpotX.h&gt;
 
-<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
+@implementation AppDelegate
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
-<span class="p">{</span>
-    <span class="c1">// Required: Initialize SpotX SDK</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span> <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span> <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span>
-        <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.spotxchange.com&quot;</span>
-            <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789&quot;</span><span class="p">];</span>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Required: Initialize SpotX SDK
+    [SpotX initializeWithApiKey:nil category:@&quot;IAB1&quot; section:@&quot;Fiction&quot;
+        domain:@&quot;www.spotxchange.com&quot;
+            url:@&quot;https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789&quot;];
 
-    <span class="c1">// Optional: Set default channel id</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultChannelID</span><span class="p">:</span><span class="s">&quot;110681&quot;</span><span class="p">];</span>
+    // Optional: Set default channel id
+    [SpotX setDefaultChannelID:&quot;110681&quot;];
 
-    <span class="c1">// Optional: Configure default settings</span>
-    <span class="kt">id</span><span class="o">&lt;</span><span class="n">SpotXAdSettings</span><span class="o">&gt;</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[</span><span class="n">SpotX</span> <span class="n">defaultSettings</span><span class="p">];</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">useHTTPS</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">useNativeBrowser</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">allowCalendar</span> <span class="o">=</span> <span class="m">@NO</span><span class="p">;</span>
+    // Optional: Configure default settings
+    id&lt;SpotXAdSettings&gt; settings = [SpotX defaultSettings];
+    settings.useHTTPS = @YES;
+    settings.useNativeBrowser = @YES;
+    settings.allowCalendar = @NO;
 
-    <span class="c1">// Optional: Configure default custom parameters (Custom Taxonomy)</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultParameters</span><span class="p">:</span><span class="l">@{</span>
-        <span class="s">@&quot;custom_param&quot;</span><span class="o">:</span> <span class="s">@&quot;custom_value&quot;</span>
-    <span class="l">}</span><span class="p">];</span>
+    // Optional: Configure default custom parameters (Custom Taxonomy)
+    [SpotX setDefaultParameters:@{
+        @&quot;custom_param&quot;: @&quot;custom_value&quot;
+    }];
 
-    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
-<span class="p">}</span>
+    return YES;
+}
 
-<span class="k">@end</span>
-</pre></div>
+@end</code></pre>
 
 
 <h3 id="show-an-ad">Show an Ad<a class="headerlink" href="#show-an-ad" title="Permanent link">#</a></h3>
-<div class="code"><pre><span class="c1">// File: ViewController.m</span>
+<pre class="code"><code class="language-objective-c">// File: ViewController.m
 
-<span class="cp">#import &quot;ViewController.h&quot;</span>
+#import &quot;ViewController.h&quot;
 
-<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
-
-
-<span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">SpotXAdDelegate</span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">strong</span><span class="p">)</span> <span class="n">SpotXAdView</span> <span class="o">*</span><span class="n">adView</span><span class="p">;</span>
-
-<span class="k">@end</span>
+#import &lt;AdManager/SpotX.h&gt;
 
 
-<span class="k">@implementation</span> <span class="nc">ViewController</span>
+@interface ViewController () &lt;SpotXAdDelegate&gt;
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
-<span class="p">{</span>
-    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+@property (nonatomic, strong) SpotXAdView *adView;
 
-    <span class="c1">// NOTE: We create a SpotXView and call -startLoading right away</span>
-    <span class="c1">//       so it is cached when we are ready to show it.</span>
-    <span class="n">_adView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SpotXView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
-     <span class="n">_adView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
-     <span class="p">[</span><span class="n">_adView</span> <span class="n">startLoading</span><span class="p">];</span>
-<span class="p">}</span>
-
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showAd</span>
-<span class="p">{</span>
-    <span class="c1">// Show the Ad. If the ad is still loading, it may take a</span>
-    <span class="c1">// few seconds for the video to start.</span>
-    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">adView</span> <span class="n">show</span><span class="p">];</span>
-<span class="p">}</span>
+@end
 
 
-<span class="cp">#pragma mark - SpotXAdViewDelegate</span>
+@implementation ViewController
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentViewController:</span><span class="p">(</span><span class="bp">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewControllerToPresent</span>
-<span class="p">{</span>
-    <span class="p">[</span><span class="nb">self</span> <span class="nl">presentViewController</span><span class="p">:</span><span class="n">viewControllerToPresent</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
-<span class="p">}</span>
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adLoaded</span>
-<span class="p">{</span>
-  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Ad is cached and ready to play&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+    // NOTE: We create a SpotXView and call -startLoading right away
+    //       so it is cached when we are ready to show it.
+    _adView = [[SpotXView alloc] initWithFrame:self.view.bounds];
+     _adView.delegate = self;
+     [_adView startLoading];
+}
 
-<span class="k">@end</span>
-</pre></div>
+- (void)showAd
+{
+    // Show the Ad. If the ad is still loading, it may take a
+    // few seconds for the video to start.
+    [self.adView show];
+}
+
+
+#pragma mark - SpotXAdViewDelegate
+
+- (void)presentViewController:(UIViewController *)viewControllerToPresent
+{
+    [self presentViewController:viewControllerToPresent animated:YES completion:nil];
+}
+
+- (void)adLoaded
+{
+  NSLog(@&quot;Ad is cached and ready to play&quot;);
+}
+
+@end</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;

@@ -352,13 +352,12 @@ ways:</li>
   or Android Studio - declare that jar as a file dependency.</li>
 <li>Using Gradle, include the following in your build.gradle file:</li>
 </ol>
-<div class="code"><pre>  repositories {
+<pre class="code"><code>  repositories {
       jcenter()
   }
   dependencies {
-        compile &#39;com.spotxchange:spotx-sdk-android:3.+&#39;
-  }
-</pre></div>
+        compile 'com.spotxchange:spotx-sdk-android:3.+'
+  }</code></pre>
 
 
 <p>You can always download the latest version of the SpotX SDK from <a href="https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view">Bintray</a>;
@@ -367,47 +366,43 @@ the latest version of the SpotX Demo App is also available on our <a href="https
 <p>The <code>AndroidManifest.xml</code> file defines permissions for your applications.
 1. Add <code>INTERNET</code> permission to the manifest file for your app, if it&rsquo;s not
 already present.</p>
-<div class="code"><pre><span class="c">&lt;!--- REQUIRED FOR INTERNET ACCESS ---&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span><span class="nt">/&gt;</span>
-</pre></div>
+<pre class="code"><code class="language-xml">&lt;!--- REQUIRED FOR INTERNET ACCESS ---&gt;
+&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;</code></pre>
 
 
 <ol>
 <li>Optionally, you may also include any or all the following permissions, which will
 improve your ad revenue.</li>
 </ol>
-<div class="code"><pre><span class="c">&lt;!--  OPTIONAL PERMISSIONS --&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span> <span class="nt">/&gt;</span>
-</pre></div>
+<pre class="code"><code class="language-xml">&lt;!--  OPTIONAL PERMISSIONS --&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;</code></pre>
 
 
 <ol>
 <li>Add the Google Mobile Ads API by editing your <code>build.gradle</code> file add adding the line:</li>
 </ol>
-<div class="code"><pre><span class="n">dependencies</span> <span class="o">{</span>
-       <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">ads</span><span class="o">:</span><span class="mf">9.2</span><span class="o">.</span><span class="mi">0</span><span class="err">&#39;</span>
-<span class="o">}</span>
-</pre></div>
+<pre class="code"><code class="language-java">dependencies {
+       compile 'com.google.android.gms:play-services-ads:9.2.0'
+}</code></pre>
 
 
 <ol>
 <li>Add the Google Play Services meta tag with the <code>&lt;application&gt;</code> tags.</li>
 </ol>
-<div class="code"><pre><span class="c">&lt;!-- Example application --&gt;</span>
-<span class="nt">&lt;application</span>
-    <span class="na">android:allowBackup=</span><span class="s">&quot;true&quot;</span>
-    <span class="na">android:icon=</span><span class="s">&quot;@drawable/ic_launcher&quot;</span>
-    <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
-    <span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme&quot;</span> <span class="nt">&gt;</span>
-    <span class="c">&lt;!-- REQUIRED --&gt;</span>
-    <span class="nt">&lt;meta-data</span>
-        <span class="na">android:name=</span><span class="s">&quot;com.google.android.gms.version&quot;</span>
-        <span class="na">android:value=</span><span class="s">&quot;@integer/google_play_services_version&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/application&gt;</span>
-</pre></div>
+<pre class="code"><code class="language-xml">&lt;!-- Example application --&gt;
+&lt;application
+    android:allowBackup=&quot;true&quot;
+    android:icon=&quot;@drawable/ic_launcher&quot;
+    android:label=&quot;@string/app_name&quot;
+    android:theme=&quot;@style/AppTheme&quot; &gt;
+    &lt;!-- REQUIRED --&gt;
+    &lt;meta-data
+        android:name=&quot;com.google.android.gms.version&quot;
+        android:value=&quot;@integer/google_play_services_version&quot; /&gt;
+&lt;/application&gt;</code></pre>
 
 
 <ol>
@@ -418,12 +413,11 @@ below for example integrations.</li>
 <p>An interstitial ad appears in a modal window, requiring the user to watch it
 before they can access other content.</p>
 <h4 id="1-initialize-the-spotx-sdk">1. Initialize the SpotX SDK<a class="headerlink" href="#1-initialize-the-spotx-sdk" title="Permanent link">#</a></h4>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-<span class="o">}</span>
-</pre></div>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  SpotX.initialize(getApplicationContext());
+}</code></pre>
 
 
 <h4 id="2-create-a-spotxadbuilder">2. Create a SpotXAdBuilder<a class="headerlink" href="#2-create-a-spotxadbuilder" title="Permanent link">#</a></h4>
@@ -435,39 +429,36 @@ The <code>SpotXAdBuilder</code> also supports custom parameters; custom paramete
 values that you can pass to us and report on later.  For more information on
 custom parameters, please contact a SpotX representative.</p>
 <h5 id="spotxadbuilder-minimum-requirements">SpotXAdBuilder Minimum Requirements<a class="headerlink" href="#spotxadbuilder-minimum-requirements" title="Permanent link">#</a></h5>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-<span class="o">}</span>
-</pre></div>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+}</code></pre>
 
 
 <h4 id="spotxadbuilder-with-additional-ad-parameters">SpotXAdBuilder With Additional Ad Parameters<a class="headerlink" href="#spotxadbuilder-with-additional-ad-parameters" title="Permanent link">#</a></h4>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">sab</span><span class="o">.</span><span class="na">useHTTPS</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-  <span class="n">sab</span><span class="o">.</span><span class="na">param</span><span class="o">(</span><span class="s">&quot;media_transcoding[]&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="s">&quot;low&quot;</span><span class="o">,</span> <span class="s">&quot;medium&quot;</span><span class="o">});</span>
-<span class="o">}</span>
-</pre></div>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  sab.useHTTPS(true);
+  sab.param(&quot;media_transcoding[]&quot;, new String[]{&quot;low&quot;, &quot;medium&quot;});
+}</code></pre>
 
 
 <h4 id="spotxadbuilder-with-custom-ad-parameters">SpotXAdBuilder With Custom Ad Parameters<a class="headerlink" href="#spotxadbuilder-with-custom-ad-parameters" title="Permanent link">#</a></h4>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">sab</span><span class="o">.</span><span class="na">custom</span><span class="o">(</span><span class="s">&quot;customParam&quot;</span><span class="o">,</span> <span class="s">&quot;customValue&quot;</span><span class="o">);</span>
-<span class="o">}</span>
-</pre></div>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  sab.custom(&quot;customParam&quot;, &quot;customValue&quot;);
+}</code></pre>
 
 
 <p>For the sake of conciseness the rest of this documentation will assume you
@@ -482,17 +473,16 @@ are doing a bare minimum integration.</p>
 returning a <code>Future&lt;SpotXAdGroup&gt;</code> we give you the ability to set up your
 application without being blocked by us retrieving your ads. If you wanted to
 ads to play in succession, your integration might look like:</p>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">adGroupFuture</span> <span class="o">=</span> <span class="n">sab</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  Future&lt;SpotXAdGroup&gt; adGroupFuture = sab.loadWithCount(2);
 
-  <span class="c1">// Setup your app while we load ads in the background</span>
-<span class="o">}</span>
-</pre></div>
+  // Setup your app while we load ads in the background
+}</code></pre>
 
 
 <h4 id="4-get-your-spotxadgroup">4. Get Your SpotXAdGroup<a class="headerlink" href="#4-get-your-spotxadgroup" title="Permanent link">#</a></h4>
@@ -505,49 +495,48 @@ will want to call the future&rsquo;s <code>get</code> method. There are two <cod
 time has ran out.</p>
 <p>It is strongly recommended that you use a timeout when resolving a future.
 For more information review the <a href="https://developer.android.com/reference/java/util/concurrent/Future.html">Android Future Documentation</a>.</p>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">adGroupFuture</span> <span class="o">=</span> <span class="n">sab</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-  <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="n">adGroupFuture</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Handle exception</span>
-  <span class="o">}</span>
-  <span class="c1">// Setup your app while we load ads in the background</span>
- <span class="err">```</span>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  Future&lt;SpotXAdGroup&gt; adGroupFuture = sab.loadWithCount(2);
+  SpotXAdGroup adGroup = null;
+  try {
+    SpotXAdGroup adGroup = adGroupFuture.get(10000, TimeUnit.MILLISECONDS);
+  }
+  catch(Exception e) {
+    // Handle exception
+  }
+  // Setup your app while we load ads in the background
+ ```
 
-<span class="err">####</span> <span class="mi">5</span><span class="o">.</span> <span class="n">Display</span> <span class="n">Your</span> <span class="n">Ad</span>
-<span class="n">Once</span> <span class="n">your</span> <span class="n">have</span> <span class="n">a</span> <span class="err">`</span><span class="n">SpotXAdGroup</span><span class="err">`</span> <span class="n">you</span> <span class="n">can</span> <span class="n">start</span> <span class="n">playing</span> <span class="n">ads</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="k">do</span> <span class="n">so</span> <span class="n">by</span>
-<span class="n">calling</span> <span class="n">one</span> <span class="n">of</span> <span class="n">our</span> <span class="n">presentation</span> <span class="n">controllers</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">wanted</span> <span class="n">to</span> <span class="n">play</span> <span class="n">an</span> <span class="n">interstitial</span>
-<span class="n">ad</span> <span class="n">your</span> <span class="n">integration</span> <span class="n">might</span> <span class="n">look</span> <span class="n">like</span><span class="o">:</span>
-<span class="err">```</span><span class="n">java</span>
-<span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">adGroupFuture</span> <span class="o">=</span> <span class="n">sab</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-  <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="n">adGroupFuture</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Handle exception</span>
-  <span class="o">}</span>
+#### 5. Display Your Ad
+Once your have a `SpotXAdGroup` you can start playing ads. You can do so by
+calling one of our presentation controllers. If you wanted to play an interstitial
+ad your integration might look like:
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  Future&lt;SpotXAdGroup&gt; adGroupFuture = sab.loadWithCount(2);
+  SpotXAdGroup adGroup = null;
+  try {
+    SpotXAdGroup adGroup = adGroupFuture.get(10000, TimeUnit.MILLISECONDS);
+  }
+  catch (Exception e) {
+    // Handle exception
+  }
 
-  <span class="c1">// Setup your app while we load ads in the background</span>
+  // Setup your app while we load ads in the background
 
-  <span class="k">if</span> <span class="o">(</span><span class="n">adGroup</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">InterstitialPresentationController</span><span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">adGroup</span><span class="o">);</span>
-  <span class="o">}</span>
-</pre></div>
+  if (adGroup != null) {
+    InterstitialPresentationController.show(getApplicationContext(), adGroup);
+  }</code></pre>
 
 
 <h2 id="event-observer">Event Observer<a class="headerlink" href="#event-observer" title="Permanent link">#</a></h2>
@@ -563,71 +552,70 @@ For more information review the <a href="https://developer.android.com/reference
 <p>We provide a <code>SpotXAdGroup.Observer</code> interface that you can implement to listen
 to these events. If this is of interest to you, then your integration might look
 like:</p>
-<div class="code"><pre><span class="nd">@Override</span>
-<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-  <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
-  <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-  <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-  <span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">adGroupFuture</span> <span class="o">=</span> <span class="n">sab</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-  <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="n">adGroupFuture</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
-    <span class="n">adGroup</span><span class="o">.</span><span class="na">registerObserver</span><span class="o">(</span><span class="k">new</span> <span class="n">MyObserver</span><span class="o">());</span>
-  <span class="o">}</span>
-  <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Handle exception</span>
-  <span class="o">}</span>
+<pre class="code"><code class="language-java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  String channelId = &quot;12345&quot;;
+  SpotX.initialize(getApplicationContext());
+  SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
+  Future&lt;SpotXAdGroup&gt; adGroupFuture = sab.loadWithCount(2);
+  SpotXAdGroup adGroup = null;
+  try {
+    SpotXAdGroup adGroup = adGroupFuture.get(10000, TimeUnit.MILLISECONDS);
+    adGroup.registerObserver(new MyObserver());
+  }
+  catch (Exception e) {
+    // Handle exception
+  }
 
-  <span class="c1">// Setup your app while we load ads in the background</span>
+  // Setup your app while we load ads in the background
 
-  <span class="k">if</span> <span class="o">(</span><span class="n">adGroup</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">InterstitialPresentationController</span><span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">adGroup</span><span class="o">);</span>
-  <span class="o">}</span>
+  if (adGroup != null) {
+    InterstitialPresentationController.show(getApplicationContext(), adGroup);
+  }
 
-  <span class="kd">private</span> <span class="kd">class</span> <span class="nc">MyObserver</span> <span class="kd">implements</span> <span class="n">SpotXAdGroup</span><span class="o">.</span><span class="na">Observer</span> <span class="o">{</span>
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onGroupStart</span><span class="o">()</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Starting Group.&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+  private class MyObserver implements SpotXAdGroup.Observer {
+      @Override
+      public void onGroupStart() {
+          Toast.makeText(this, &quot;Starting Group.&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStart</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Starting Ad&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+      @Override
+      public void onStart(SpotXAd ad) {
+          Toast.makeText(this, &quot;Starting Ad&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Ad Complete&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+      @Override
+      public void onComplete(SpotXAd ad) {
+          Toast.makeText(this, &quot;Ad Complete&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSkip</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Ad Skipped&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+      @Override
+      public void onSkip(SpotXAd ad) {
+          Toast.makeText(this, &quot;Ad Skipped&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">Error</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Ad Error&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+      @Override
+      public void onError(SpotXAd ad, Error error) {
+          Toast.makeText(this, &quot;Ad Error&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onGroupComplete</span><span class="o">()</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Group completed.&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
+      @Override
+      public void onGroupComplete() {
+          Toast.makeText(this, &quot;Group completed.&quot;, Toast.LENGTH_SHORT).show();
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onTimeUpdate</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">,</span> <span class="kt">int</span> <span class="n">elapsed</span><span class="o">)</span> <span class="o">{</span>
-          <span class="c1">// do nothing</span>
-      <span class="o">}</span>
+      @Override
+      public void onTimeUpdate(SpotXAd ad, int elapsed) {
+          // do nothing
+      }
 
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">SpotXAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">&quot;Ad Clicked&quot;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+      @Override
+      public void onClick(SpotXAd ad) {
+          Toast.makeText(this, &quot;Ad Clicked&quot;, Toast.LENGTH_SHORT).show();
+      }
+  }
+}</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;

@@ -333,13 +333,12 @@
 <li>Attach an implementation of the SpotXAdDelegate protocol, if you are interested in Ad lifecycle events.</li>
 <li>Present the Ad by calling SpotXAd.show().</li>
 </ol>
-<div class="code"><pre><span class="kd">static</span> <span class="kd">let</span> <span class="nv">CHANNEL_ID</span> <span class="p">=</span> <span class="s">&quot;85394&quot;</span>
+<pre class="code"><code class="language-swift">static let CHANNEL_ID = &quot;85394&quot;
 
-<span class="kd">func</span> <span class="nf">playAd</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span> <span class="p">=</span> <span class="n">SpotXAd</span><span class="p">(</span><span class="n">channelId</span><span class="p">:</span> <span class="n">CHANNEL_ID</span><span class="p">,</span> <span class="n">delegate</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span><span class="p">?.</span><span class="n">show</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
+func playAd() {
+    self.ad = SpotXAd(channelId: CHANNEL_ID, delegate: self)
+    self.ad?.show(self, animated: true)
+}</code></pre>
 
 
 <h2 id="presenting-an-ad-in-a-tvml-app">Presenting an Ad in a TVML App<a class="headerlink" href="#presenting-an-ad-in-a-tvml-app" title="Permanent link">#</a></h2>
@@ -351,33 +350,32 @@
 <li>Add event listeners to the player, if you are interested in Ad lifecycle events.</li>
 <li>Present the Ad by calling <code>player.standalone().play()</code>.</li>
 </ol>
-<div class="code"><pre><span class="c1">// NOTE: Subject to change after prerelease development</span>
-<span class="kd">var</span> <span class="nx">SPOTX_SDK</span> <span class="o">=</span> <span class="s1">&#39;https://m.spotx.ninja/tvos/v2/sdk.js&#39;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">CHANNEL_ID</span> <span class="o">=</span> <span class="s1">&#39;85394&#39;</span>
+<pre class="code"><code class="language-javascript">// NOTE: Subject to change after prerelease development
+var SPOTX_SDK = 'https://m.spotx.ninja/tvos/v2/sdk.js';
+var CHANNEL_ID = '85394'
 
-<span class="nx">App</span><span class="p">.</span><span class="nx">onLaunch</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">evaluateScripts</span><span class="p">([</span><span class="nx">SPOTX_SDK</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">loadAd</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">};</span>
+App.onLaunch = function(options) {
+  evaluateScripts([SPOTX_SDK], function() {
+    loadAd();
+  });
+};
 
-<span class="kd">function</span> <span class="nx">loadAd</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">custom_1</span><span class="o">:</span> <span class="s1">&#39;custom-param&#39;</span>
-  <span class="p">};</span>
+function loadAd() {
+  var params = {
+    custom_1: 'custom-param'
+  };
 
-  <span class="nx">SpotX</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">CHANNEL_ID</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">player</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">AD_EVENTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AdStarted&#39;</span><span class="p">,</span> <span class="s1">&#39;AdStopped&#39;</span><span class="p">,</span> <span class="s1">&#39;AdError&#39;</span><span class="p">];</span>
-      <span class="nx">AD_EVENTS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">player</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received event: &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
-        <span class="p">});</span>
-      <span class="p">});</span>
+  SpotX.load(CHANNEL_ID, params, function (error, player) {
+      var AD_EVENTS = ['AdStarted', 'AdStopped', 'AdError'];
+      AD_EVENTS.forEach(function(event) {
+        player.addEventListener(event, function() {
+          console.log('Received event: ' + event);
+        });
+      });
 
-      <span class="nx">player</span><span class="p">.</span><span class="nx">standalone</span><span class="p">().</span><span class="nx">play</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</pre></div>
+      player.standalone().play();
+  });
+}</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
