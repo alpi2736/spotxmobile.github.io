@@ -10,4 +10,3 @@ We Currently have SDKs/Adapters for:
 
 ![SpotX For Android and iOS](/images/spotx-phones.png)
 
-&copy; 2016 SpotXchange
