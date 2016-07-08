@@ -2,6 +2,7 @@ SHELL = /bin/bash
 
 setup:
 	pip install mkdocs
+	pip install mkdocs-material
 
 clean:
 	@rm -rf site
