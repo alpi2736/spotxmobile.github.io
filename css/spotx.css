@@ -38,6 +38,6 @@ img {
     display: block;
 }
 
-.previous, .next, .footer, .copyright {
+.previous, .next, .footer {
     display: none;
 }
