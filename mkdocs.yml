@@ -1,5 +1,4 @@
-#repo_url: https://github.com/spotxmobile/spotxmobile.github.io
-#remote_branch: master
+remote_branch: master
 
 site_name: SPOTX Mobile SDKs
 site_url: https://spotxmobile.github.io
