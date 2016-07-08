@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>TVML - SPOTX Mobile SDKs</title>
+        <title>TVML - SpotX Mobile</title>
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/spotx-sdk-tvml/">
+        <link rel="canonical" href="https://spotxmobile.github.io/tvml-sdk/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/spotx-sdk-tvml/">
-    <meta property="og:title" content="SPOTX Mobile SDKs">
-    <meta property="og:image" content="https://spotxmobile.github.io/spotx-sdk-tvml//../images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="SPOTX Mobile SDKs">
+    <meta property="og:url" content="https://spotxmobile.github.io/tvml-sdk/">
+    <meta property="og:title" content="SpotX Mobile">
+    <meta property="og:image" content="https://spotxmobile.github.io/tvml-sdk//../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
@@ -104,6 +104,11 @@
     </div>
     
     
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/spotxmobile" title="@spotxmobile on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
     </div>
@@ -137,7 +142,7 @@
       
       <div class="name">
         <strong>
-          SPOTX Mobile SDKs
+          SpotX Mobile
           <span class="version">
             
           </span>
@@ -163,19 +168,46 @@
           
             
   <li>
-    <a class="" title="Android" href="../sdk-android/">
-      Android
+    <span class="section">Android</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../android-sdk/">
+      SDK Quick Start
     </a>
     
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Advanced Documentation" href="../android-sdk-advanced/">
+      Advanced Documentation
+    </a>
+    
+  </li>
+
+      
+    </ul>
   </li>
 
           
             
   <li>
-    <a class="" title="iOS" href="../spotx-sdk-ios/">
-      iOS
+    <span class="section">iOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../ios-sdk/">
+      SDK Quick Start
     </a>
     
+  </li>
+
+      
+    </ul>
   </li>
 
           
@@ -186,7 +218,7 @@
       
         
   <li>
-    <a class="" title="AVPlayer" href="../spotx-sdk-avplayer/">
+    <a class="" title="AVPlayer" href="../avplayer-sdk/">
       AVPlayer
     </a>
     
@@ -240,7 +272,7 @@
       
         
   <li>
-    <a class="" title="MoPub Android" href="../spotx-mopub-android/">
+    <a class="" title="MoPub Android" href="../android-mopub-adapter/">
       MoPub Android
     </a>
     
@@ -249,7 +281,7 @@
       
         
   <li>
-    <a class="" title="MoPub iOS" href="../spotx-mopub-ios/">
+    <a class="" title="MoPub iOS" href="../ios-mopub-adapter/">
       MoPub iOS
     </a>
     
@@ -261,6 +293,20 @@
 
           
         </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/spotxmobile" target="_blank" title="@spotxmobile on GitHub">
+                  @spotxmobile on GitHub
+                </a>
+              </li>
+            
+          </ul>
         
       </div>
     </div>
@@ -287,13 +333,12 @@
 <li>Attach an implementation of the SpotXAdDelegate protocol, if you are interested in Ad lifecycle events.</li>
 <li>Present the Ad by calling SpotXAd.show().</li>
 </ol>
-<div class="code"><pre><span class="kd">static</span> <span class="kd">let</span> <span class="nv">CHANNEL_ID</span> <span class="p">=</span> <span class="s">&quot;85394&quot;</span>
+<pre class="code"><code class="language-swift">static let CHANNEL_ID = &quot;85394&quot;
 
-<span class="kd">func</span> <span class="nf">playAd</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span> <span class="p">=</span> <span class="n">SpotXAd</span><span class="p">(</span><span class="n">channelId</span><span class="p">:</span> <span class="n">CHANNEL_ID</span><span class="p">,</span> <span class="n">delegate</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span><span class="p">?.</span><span class="n">show</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
+func playAd() {
+    self.ad = SpotXAd(channelId: CHANNEL_ID, delegate: self)
+    self.ad?.show(self, animated: true)
+}</code></pre>
 
 
 <h2 id="presenting-an-ad-in-a-tvml-app">Presenting an Ad in a TVML App<a class="headerlink" href="#presenting-an-ad-in-a-tvml-app" title="Permanent link">#</a></h2>
@@ -305,33 +350,32 @@
 <li>Add event listeners to the player, if you are interested in Ad lifecycle events.</li>
 <li>Present the Ad by calling <code>player.standalone().play()</code>.</li>
 </ol>
-<div class="code"><pre><span class="c1">// NOTE: Subject to change after prerelease development</span>
-<span class="kd">var</span> <span class="nx">SPOTX_SDK</span> <span class="o">=</span> <span class="s1">&#39;https://m.spotx.ninja/tvos/v2/sdk.js&#39;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">CHANNEL_ID</span> <span class="o">=</span> <span class="s1">&#39;85394&#39;</span>
+<pre class="code"><code class="language-javascript">// NOTE: Subject to change after prerelease development
+var SPOTX_SDK = 'https://m.spotx.ninja/tvos/v2/sdk.js';
+var CHANNEL_ID = '85394'
 
-<span class="nx">App</span><span class="p">.</span><span class="nx">onLaunch</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">evaluateScripts</span><span class="p">([</span><span class="nx">SPOTX_SDK</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">loadAd</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">};</span>
+App.onLaunch = function(options) {
+  evaluateScripts([SPOTX_SDK], function() {
+    loadAd();
+  });
+};
 
-<span class="kd">function</span> <span class="nx">loadAd</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">custom_1</span><span class="o">:</span> <span class="s1">&#39;custom-param&#39;</span>
-  <span class="p">};</span>
+function loadAd() {
+  var params = {
+    custom_1: 'custom-param'
+  };
 
-  <span class="nx">SpotX</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">CHANNEL_ID</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">player</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">AD_EVENTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AdStarted&#39;</span><span class="p">,</span> <span class="s1">&#39;AdStopped&#39;</span><span class="p">,</span> <span class="s1">&#39;AdError&#39;</span><span class="p">];</span>
-      <span class="nx">AD_EVENTS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">player</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received event: &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
-        <span class="p">});</span>
-      <span class="p">});</span>
+  SpotX.load(CHANNEL_ID, params, function (error, player) {
+      var AD_EVENTS = ['AdStarted', 'AdStopped', 'AdError'];
+      AD_EVENTS.forEach(function(event) {
+        player.addEventListener(event, function() {
+          console.log('Received event: ' + event);
+        });
+      });
 
-      <span class="nx">player</span><span class="p">.</span><span class="nx">standalone</span><span class="p">().</span><span class="nx">play</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</pre></div>
+      player.standalone().play();
+  });
+}</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
@@ -350,7 +394,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../spotx-sdk-avplayer/" title="AVPlayer">
+        <a href="../avplayer-sdk/" title="AVPlayer">
           <span class="direction">
             Previous
           </span>
@@ -369,7 +413,7 @@
     </div>
     <div class="next">
       
-        <a href="../spotx-mopub-android/" title="MoPub Android">
+        <a href="../android-mopub-adapter/" title="MoPub Android">
           <span class="direction">
             Next
           </span>

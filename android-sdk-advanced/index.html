@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>MoPub Android - SPOTX Mobile SDKs</title>
+        <title>Advanced Documentation - SpotX Mobile</title>
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/spotx-mopub-android/">
+        <link rel="canonical" href="https://spotxmobile.github.io/android-sdk-advanced/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/spotx-mopub-android/">
-    <meta property="og:title" content="SPOTX Mobile SDKs">
-    <meta property="og:image" content="https://spotxmobile.github.io/spotx-mopub-android//../images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="SPOTX Mobile SDKs">
+    <meta property="og:url" content="https://spotxmobile.github.io/android-sdk-advanced/">
+    <meta property="og:title" content="SpotX Mobile">
+    <meta property="og:image" content="https://spotxmobile.github.io/android-sdk-advanced//../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
@@ -94,15 +94,20 @@
           <span class="path">
             
               
-                Adapters <i class="icon icon-link"></i>
+                Android <i class="icon icon-link"></i>
               
             
           </span>
         
-        MoPub Android
+        Advanced Documentation
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/spotxmobile" title="@spotxmobile on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -137,7 +142,7 @@
       
       <div class="name">
         <strong>
-          SPOTX Mobile SDKs
+          SpotX Mobile
           <span class="version">
             
           </span>
@@ -163,19 +168,61 @@
           
             
   <li>
-    <a class="" title="Android" href="../sdk-android/">
-      Android
+    <span class="section">Android</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../android-sdk/">
+      SDK Quick Start
     </a>
     
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Advanced Documentation" href="./">
+      Advanced Documentation
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Optional Ad Parameters" href="#optional-ad-parameters">
+                Optional Ad Parameters
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
   </li>
 
           
             
   <li>
-    <a class="" title="iOS" href="../spotx-sdk-ios/">
-      iOS
+    <span class="section">iOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../ios-sdk/">
+      SDK Quick Start
     </a>
     
+  </li>
+
+      
+    </ul>
   </li>
 
           
@@ -186,7 +233,7 @@
       
         
   <li>
-    <a class="" title="AVPlayer" href="../spotx-sdk-avplayer/">
+    <a class="" title="AVPlayer" href="../avplayer-sdk/">
       AVPlayer
     </a>
     
@@ -195,7 +242,7 @@
       
         
   <li>
-    <a class="" title="TVML" href="../spotx-sdk-tvml/">
+    <a class="" title="TVML" href="../tvml-sdk/">
       TVML
     </a>
     
@@ -213,47 +260,16 @@
       
         
   <li>
-    <a class="current" title="MoPub Android" href="./">
+    <a class="" title="MoPub Android" href="../android-mopub-adapter/">
       MoPub Android
     </a>
-    
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Who Can Use the Plugin" href="#who-can-use-the-plugin">
-                Who Can Use the Plugin
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="What the Plugin Does" href="#what-the-plugin-does">
-                What the Plugin Does
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="How to Install the Plugin" href="#how-to-install-the-plugin">
-                How to Install the Plugin
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Configuration" href="#configuration">
-                Configuration
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
       
         
   <li>
-    <a class="" title="MoPub iOS" href="../spotx-mopub-ios/">
+    <a class="" title="MoPub iOS" href="../ios-mopub-adapter/">
       MoPub iOS
     </a>
     
@@ -266,6 +282,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/spotxmobile" target="_blank" title="@spotxmobile on GitHub">
+                  @spotxmobile on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -274,47 +304,44 @@
       <article class="article">
         <div class="wrapper">
           
-            <h1>MoPub Android</h1>
-          
-          <h2 id="who-can-use-the-plugin">Who Can Use the Plugin<a class="headerlink" href="#who-can-use-the-plugin" title="Permanent link">#</a></h2>
-<p>To use the plugin, you need to be a SpotXchange publisher and have an active account with MoPub.</p>
-<h3 id="become-a-spotxchange-publisher">Become a SpotXchange Publisher<a class="headerlink" href="#become-a-spotxchange-publisher" title="Permanent link">#</a></h3>
-<p>If you are not already a SpotXchange publisher, click <a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">here</a> to apply.</p>
-<h3 id="create-a-mopub-account">Create a MoPub Account<a class="headerlink" href="#create-a-mopub-account" title="Permanent link">#</a></h3>
-<p>If you don&rsquo;t yet have a MoPub account, click <a href="https://app.mopub.com/account/register/">here</a> to sign up.</p>
-<h2 id="what-the-plugin-does">What the Plugin Does<a class="headerlink" href="#what-the-plugin-does" title="Permanent link">#</a></h2>
-<p>The plugin allows the SpotX SDK and the MoPub SDK to communicate with each other seamlessly. To use this new plugin, SpotX publishers will need to integrate the SpotX SDK and the MoPub SDK into their App.</p>
-<h2 id="how-to-install-the-plugin">How to Install the Plugin<a class="headerlink" href="#how-to-install-the-plugin" title="Permanent link">#</a></h2>
-<p>There are three ways to install this plugin:</p>
-<h3 id="gradle-dependency-preferred">Gradle Dependency (preferred)<a class="headerlink" href="#gradle-dependency-preferred" title="Permanent link">#</a></h3>
-<p>Simply add the following to your build.gradle.</p>
-<div class="code"><pre><span class="n">compile</span> <span class="s1">&#39;com.spotxchange:spotx-mopub-android:+&#39;</span>
-</pre></div>
-
-
-<h3 id="maven-dependency">Maven Dependency<a class="headerlink" href="#maven-dependency" title="Permanent link">#</a></h3>
-<p>Declare the dependency in Maven:</p>
-<div class="code"><pre><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.spotxchange<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>spotx-mopub-android<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</pre></div>
-
-
-<h3 id="as-a-library-project">As a Library Project<a class="headerlink" href="#as-a-library-project" title="Permanent link">#</a></h3>
-<p>Download the source code and import it as a library project in Android Studio or Eclipse. The project is available from our GitHub repository <a href="https://github.com/spotxmobile/spotx-mopub-android">here</a>.</p>
-<p>Get more information on how to do this <a href="http://developer.android.com/tools/projects/index.html#LibraryProjects">here</a>.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<p>Use the custom data field to pass configuration parameters to the SpotX plugin. Get more information on MoPub custom events <a href="https://dev.twitter.com/mopub/ad-networks">here</a>. The custom data is a <a href="http://json.org">JSON</a> object with the following keys:</p>
-<ul>
-<li>channel_id - Your SpotXchange  publisher channel ID</li>
-<li>playstore_url - URL to your app in the Google Play store.</li>
-<li>app_domain - Internet domain for your app&rsquo;s website</li>
-<li>iab_category - IAB category used to classify your app</li>
-<li>in_app_browser - If true, ad interactions will be displayed in an internal browser rather than the system default</li>
-</ul>
-<p>Get step-by-step instructions on how to specify parameters through the MoPub UI <a href="https://dev.twitter.com/mopub/ad-networks">here</a>.</p>
+          <h1 id="spotx-android-sdk-advanced-documentation">SpotX Android SDK Advanced Documentation<a class="headerlink" href="#spotx-android-sdk-advanced-documentation" title="Permanent link">#</a></h1>
+<p>Advanced documentation for SpotX Android SDK</p>
+<h2 id="optional-ad-parameters">Optional Ad Parameters<a class="headerlink" href="#optional-ad-parameters" title="Permanent link">#</a></h2>
+<p>You may specify additional parameters to refine your ad request with SpotX. The values for the following parameters should adhere to the <a href="http://www.iab.com/wp-content/uploads/2015/06/OpenRTBAPISpecificationVersion2_2.pdf">OpenRTB API Specification 2.2</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app[cat]</td>
+<td>Array of IAB content categories for the overall application.</td>
+</tr>
+<tr>
+<td>app[privacypolicy]</td>
+<td>Specifies whether the app has a privacy policy. “1” means there is a policy and “0” means there is not.</td>
+</tr>
+<tr>
+<td>app[storeurl]</td>
+<td>For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request.</td>
+</tr>
+<tr>
+<td>app[content][language]</td>
+<td>Language of the content. Use alpha-2/ISO 639-1 codes.</td>
+</tr>
+<tr>
+<td>app[content][contentrating]</td>
+<td>Content rating (e.g., MPAA)</td>
+</tr>
+<tr>
+<td>device[dnt]</td>
+<td>If &ldquo;1&rdquo;, then tracking is set to true, &ldquo;0&rdquo; for false.</td>
+</tr>
+</tbody>
+</table>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
@@ -333,7 +360,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../spotx-sdk-tvml/" title="TVML">
+        <a href="../android-sdk/" title="SDK Quick Start">
           <span class="direction">
             Previous
           </span>
@@ -343,7 +370,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                TVML
+                SDK Quick Start
               </div>
             </div>
           </div>
@@ -352,14 +379,14 @@
     </div>
     <div class="next">
       
-        <a href="../spotx-mopub-ios/" title="MoPub iOS">
+        <a href="../ios-sdk/" title="SDK Quick Start">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                MoPub iOS
+                SDK Quick Start
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

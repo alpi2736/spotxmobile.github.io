@@ -10,31 +10,15 @@
     
 
     
-    <url>
-     <loc>https://spotxmobile.github.io/sdk-android/</loc>
-     <lastmod>2016-07-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://spotxmobile.github.io/spotx-sdk-ios/</loc>
-     <lastmod>2016-07-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
         
     <url>
-     <loc>https://spotxmobile.github.io/spotx-sdk-avplayer/</loc>
+     <loc>https://spotxmobile.github.io/android-sdk/</loc>
      <lastmod>2016-07-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://spotxmobile.github.io/spotx-sdk-tvml/</loc>
+     <loc>https://spotxmobile.github.io/android-sdk-advanced/</loc>
      <lastmod>2016-07-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -44,13 +28,39 @@
     
         
     <url>
-     <loc>https://spotxmobile.github.io/spotx-mopub-android/</loc>
+     <loc>https://spotxmobile.github.io/ios-sdk/</loc>
+     <lastmod>2016-07-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://spotxmobile.github.io/avplayer-sdk/</loc>
      <lastmod>2016-07-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://spotxmobile.github.io/spotx-mopub-ios/</loc>
+     <loc>https://spotxmobile.github.io/tvml-sdk/</loc>
+     <lastmod>2016-07-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://spotxmobile.github.io/android-mopub-adapter/</loc>
+     <lastmod>2016-07-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://spotxmobile.github.io/ios-mopub-adapter/</loc>
      <lastmod>2016-07-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
