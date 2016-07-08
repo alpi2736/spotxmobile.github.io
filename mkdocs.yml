@@ -7,7 +7,7 @@ copyright: 'Copyright (c) 2016 SpotXchange, Inc.'
 
 pages:
   - Home: 'index.md'
-  - Android: 'spotx-sdk-android.md'
+  - Android: 'sdk-android.md'
   - iOS: 'spotx-sdk-ios.md'
   - Apple tvOS:
     - AVPlayer: 'spotx-sdk-avplayer.md'
