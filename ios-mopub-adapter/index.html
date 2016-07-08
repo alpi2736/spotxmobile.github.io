@@ -340,7 +340,8 @@
 <p>There are two ways to install this plugin:</p>
 <h3 id="cocoapods-preferred">CocoaPods (preferred)<a class="headerlink" href="#cocoapods-preferred" title="Permanent link">#</a></h3>
 <p>Simply add the following to your Podfile.</p>
-<pre class="code"><code class="language-ruby">pod 'SpotX-MoPub-Plugin'</code></pre>
+<div class="code"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;SpotX-MoPub-Plugin&#39;</span>
+</pre></div>
 
 
 <h3 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">#</a></h3>
@@ -382,19 +383,20 @@ contains the following parameter:</p>
 <li>channel_id - Your SpotX publisher channel ID</li>
 </ul>
 <p>The following code snippet demonstrates how to use the SpotX mediation settings object.</p>
-<pre class="code"><code class="language-objective-c">-(void) loadRewardedVideo {
-    // Initialize rewarded video before loading any ads.
-    [[MoPub sharedInstance] initializeRewardedVideoWithGlobalMediationSettings:nil delegate:self];
+<div class="code"><pre><span></span><span class="p">-(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">loadRewardedVideo</span> <span class="p">{</span>
+    <span class="c1">// Initialize rewarded video before loading any ads.</span>
+    <span class="p">[[</span><span class="n">MoPub</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="nl">initializeRewardedVideoWithGlobalMediationSettings</span><span class="p">:</span><span class="nb">nil</span> <span class="nl">delegate</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span>
 
-    // Create the SpotX Mediation Settings object
-    SpotXInstanceMediationSettings * settings = [[SpotXInstanceMediationSettings alloc] init];
+    <span class="c1">// Create the SpotX Mediation Settings object</span>
+    <span class="n">SpotXInstanceMediationSettings</span> <span class="o">*</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SpotXInstanceMediationSettings</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
 
-    // Set the SpotX channel ID
-    settings.channel_id = @&quot;[SpotX publisher channel ID]&quot;;
+    <span class="c1">// Set the SpotX channel ID</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">channel_id</span> <span class="o">=</span> <span class="s">@&quot;[SpotX publisher channel ID]&quot;</span><span class="p">;</span>
 
-    // Fetch the rewarded video ad.
-    [MPRewardedVideo loadRewardedVideoAdWithAdUnitID:@“[Placeholder Ad Unit ID]“ withMediationSettings:settings];
-}</code></pre>
+    <span class="c1">// Fetch the rewarded video ad.</span>
+    <span class="p">[</span><span class="n">MPRewardedVideo</span> <span class="nl">loadRewardedVideoAdWithAdUnitID</span><span class="p">:@</span><span class="err">“</span><span class="p">[</span><span class="n">Placeholder</span> <span class="n">Ad</span> <span class="n">Unit</span> <span class="n">ID</span><span class="p">]</span><span class="err">“</span> <span class="nl">withMediationSettings</span><span class="p">:</span><span class="n">settings</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
 
 
 <p>For a more detailed example of using the SpotX-MoPub-Plugin, checkout our <a href="https://github.com/spotxmobile/mopub-test-ios">SpotX-MoPub Integration Testing App for iOS</a> on GitHub.</p>
