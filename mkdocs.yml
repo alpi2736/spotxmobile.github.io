@@ -8,17 +8,17 @@ copyright: 'Copyright (c) 2016 SpotXchange, Inc.'
 pages:
   - Home: 'index.md'
   - Android:
-    - SDK Quick Start: 'android-sdk.md'
-    - Advanced Documentation: 'android-sdk-advanced.md'
+    - SDK Quick Start: 'android/sdk.md'
+    - Advanced Documentation: 'android/sdk-advanced.md'
   - iOS:
-    - SDK Quick Start: 'ios-sdk.md'
+    - SDK Quick Start: 'ios/sdk.md'
   - Apple tvOS:
-    - AVPlayer: 'avplayer-sdk.md'
-    - TVML: 'tvml-sdk.md'
+    - AVPlayer: 'tvos/avplayer-sdk.md'
+    - TVML: 'tvos/tvml-sdk.md'
   - Adapters:
-    - MoPub Android: 'android-mopub-adapter.md'
-    - MoPub iOS: 'ios-mopub-adapter.md'
-
+    - MoPub Android: 'adapters/mopub/android-adapter.md'
+    - MoPub iOS: 'adapters/mopub/ios-adapter.md'
+    - Brightcove Android: 'adapters/brightcove/android-adapter.md'
 
 theme: material
 

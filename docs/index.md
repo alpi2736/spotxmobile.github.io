@@ -7,6 +7,6 @@ We Currently have SDKs/Adapters for:
 - iOS
 - AppleTV
 - MoPub SDK
+- Brightcove
 
 ![SpotX For Android and iOS](/images/spotx-phones.png)
-
