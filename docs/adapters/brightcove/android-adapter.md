@@ -49,7 +49,7 @@ SpotX.initialize(getApplicationContext());
 // construct adapter
 String channelId = "85394";
 EventEmitter emitter = brightcoveVideoView.getEventEmitter()
-new SpotXBrightcoveAdapter(emitter, this, channelId);
+SpotXBrightcoveAdapter spotxAdapter = new SpotXBrightcoveAdapter(emitter, this, channelId);
 ```
 
 You can set the number of ads that the adapter will play be setting the `adCount` property to value greater than 1.
@@ -66,6 +66,15 @@ If you want to customize the timeout length for loading an ad you can set the `a
 ```java
 spotxAdapter.adLoadTimeoutSeconds = 5; // default: 10 seconds
 ```
+
+## Configure
+
+If you wish to set additional settings such as `useHTTPS` you can access the `SpotXAdBuilder` with the function `getAdBuilder()`.
+```java
+spotxAdapter.getAdBuilder().useHTTPS = true;
+```
+
+To learn more about the additional settings and parameters you can pass, check out the [SpotX SDK Android Documentation](/android/sdk/#ad-integration).
 
 ## Usage
 

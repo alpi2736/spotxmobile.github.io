@@ -77,7 +77,7 @@ dependencies {
 4. You're now ready to integrate with the SpotX SDK. Refer to the selections
 below for example integrations.
 
-## Interstitial Ad Integration
+## Ad Integration
 An interstitial ad appears in a modal window, requiring the user to watch it
 before they can access other content.
 #### 1. Initialize the SpotX SDK
@@ -98,7 +98,8 @@ The `SpotXAdBuilder` also supports custom parameters; custom parameters are
 values that you can pass to us and report on later.  For more information on
 custom parameters, please contact a SpotX representative.
 
-##### SpotXAdBuilder Minimum Requirements
+
+#### SpotXAdBuilder Minimum Requirements
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -220,6 +221,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## Event Observer
 There may be times where you would like to listen to events. Events include:
+
 * `onGroupStart()` - triggers before any ads starts playing
 * `onStart(SpotXAd ad)` - triggers when a single ad starts playing
 * `onError(SpotXAd ad)` - triggers if an error occurs during playtime
