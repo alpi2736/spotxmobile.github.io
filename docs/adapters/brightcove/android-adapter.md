@@ -2,16 +2,16 @@
 
 ## Who Can Use the Adapter
 
-To use the plugin, you need to be a SpotX publisher and use the Brightcove Player SDK for Android.
-If you are not already a SpotX publisher, click [here](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/) to apply.
+To use the adapter, you need to be a SpotX publisher and use the Brightcove Player SDK for Android.
+If you are not already a SpotX publisher, [apply to become a spotx publisher](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/).
 
-## What the Plugin Does
+## What the adapter Does
 
-The plugin allows the [SpotX SDK](/android/sdk) and the Brightcove Player SDK to work together so you can monetize your player's content. To use this new plugin, SpotX publishers will need to integrate the SpotX SDK and the Brightcove Player SDK into their App.
+The adapter allows the [SpotX SDK](/android/sdk) and the Brightcove Player SDK to work together so you can monetize your player's content.
 
 ## How to Install the Adapter
 
-There are three ways to install this plugin:
+There are three ways to install this adapter:
 
 ### Gradle Dependency (preferred)
 
@@ -35,13 +35,13 @@ Declare the dependency in Maven:
 
 ### As a Library Project
 
-Download the library and import it as a library project in Android Studio or Eclipse. The project is available from our [bintray repo](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-brightcove).
+Download the library and import it as a library project in Android Studio or Eclipse. The library is available from our [bintray repo](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-brightcove).
 
 Get more information on how to do this at the [Android Developer Docs](http://developer.android.com/tools/projects/index.html#LibraryProjects).
 
 ## Set Up
 
-To set up and use the SpotX plugin you need to initialize the SpotX SDK and construct the adapter with your publisher channel ID within your activity.
+To set up and use the SpotX adapter you need to initialize the SpotX SDK and construct the adapter with your publisher channel ID within your activity.
 ```java
 // init SpotX
 SpotX.initialize(getApplicationContext());
@@ -78,4 +78,4 @@ To learn more about the additional settings and parameters you can pass, check o
 
 ## Usage
 
-You can look at the [SpotX Demo App](https://github.com/spotxmobile/spotx-demo-android) on how to integrate the  Brightcove adapter, or you can follow [Brightcove's sample app](https://github.com/BrightcoveOS/android-plugin-guide/blob/master/sample/SamplePluginApplication/src/main/java/com/brightcove/player/application/MainActivity.java) on how to configure and use the plugin with the Brightcove SDK.
+You can look at the [SpotX Demo App](https://github.com/spotxmobile/spotx-demo-android) on how to integrate the  Brightcove adapter, or you can follow [Brightcove's sample app](https://github.com/BrightcoveOS/android-plugin-guide/blob/master/sample/SamplePluginApplication/src/main/java/com/brightcove/player/application/MainActivity.java) on how to configure and use the adapter with the Brightcove SDK.
