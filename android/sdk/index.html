@@ -13,41 +13,41 @@
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/android-sdk/">
+        <link rel="canonical" href="https://spotxmobile.github.io/android/sdk/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/android-sdk/">
+    <meta property="og:url" content="https://spotxmobile.github.io/android/sdk/">
     <meta property="og:title" content="SpotX Mobile">
-    <meta property="og:image" content="https://spotxmobile.github.io/android-sdk//../images/logo.png">
+    <meta property="og:image" content="https://spotxmobile.github.io/android/sdk//../../images/logo.png">
     <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-      <link rel="apple-touch-icon" href="../images/logo.png">
+      <link rel="apple-touch-icon" href="../../images/logo.png">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../../images/favicon.ico">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('../assets/fonts/icon.eot?52m981');
-      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('../assets/fonts/icon.woff?52m981')
+      		   url('../../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('../assets/fonts/icon.ttf?52m981')
+      		   url('../../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('../assets/fonts/icon.svg?52m981#icon')
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
     
     
       
@@ -64,9 +64,9 @@
       </style>
     
     
-      <link rel="stylesheet" href="../css/spotx.css">
+      <link rel="stylesheet" href="../../css/spotx.css">
     
-    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
@@ -137,7 +137,7 @@
     <div class="banner">
       
         <div class="logo">
-          <img src="../images/logo.png">
+          <img src="../../images/logo.png">
         </div>
       
       <div class="name">
@@ -159,7 +159,7 @@
           
             
   <li>
-    <a class="" title="Home" href="..">
+    <a class="" title="Home" href="../..">
       Home
     </a>
     
@@ -196,14 +196,20 @@
             </li>
           
             <li class="anchor">
+              <a title="Install the SDK" href="#install-the-sdk">
+                Install the SDK
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Setup Your Android Manifest" href="#setup-your-android-manifest">
                 Setup Your Android Manifest
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Interstitial Ad Integration" href="#interstitial-ad-integration">
-                Interstitial Ad Integration
+              <a title="Ad Integration" href="#ad-integration">
+                Ad Integration
               </a>
             </li>
           
@@ -221,7 +227,7 @@
       
         
   <li>
-    <a class="" title="Advanced Documentation" href="../android-sdk-advanced/">
+    <a class="" title="Advanced Documentation" href="../sdk-advanced/">
       Advanced Documentation
     </a>
     
@@ -239,7 +245,7 @@
       
         
   <li>
-    <a class="" title="SDK Quick Start" href="../ios-sdk/">
+    <a class="" title="SDK Quick Start" href="../../ios/sdk/">
       SDK Quick Start
     </a>
     
@@ -257,7 +263,7 @@
       
         
   <li>
-    <a class="" title="AVPlayer" href="../avplayer-sdk/">
+    <a class="" title="AVPlayer" href="../../tvos/avplayer-sdk/">
       AVPlayer
     </a>
     
@@ -266,7 +272,7 @@
       
         
   <li>
-    <a class="" title="TVML" href="../tvml-sdk/">
+    <a class="" title="TVML" href="../../tvos/tvml-sdk/">
       TVML
     </a>
     
@@ -284,7 +290,7 @@
       
         
   <li>
-    <a class="" title="MoPub Android" href="../android-mopub-adapter/">
+    <a class="" title="MoPub Android" href="../../adapters/mopub/android-adapter/">
       MoPub Android
     </a>
     
@@ -293,8 +299,17 @@
       
         
   <li>
-    <a class="" title="MoPub iOS" href="../ios-mopub-adapter/">
+    <a class="" title="MoPub iOS" href="../../adapters/mopub/ios-adapter/">
       MoPub iOS
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Brightcove Android" href="../../adapters/brightcove/android-adapter/">
+      Brightcove Android
     </a>
     
   </li>
@@ -330,52 +345,54 @@
           
           <h1 id="spotx-android-sdk-quick-start">SpotX Android SDK Quick Start<a class="headerlink" href="#spotx-android-sdk-quick-start" title="Permanent link">#</a></h1>
 <p>Example code and tutorial for displaying SpotX video ads in Android apps.</p>
+<p>Check out the <a href="https://github.com/spotxmobile/spotx-demo-android">SpotX Demo App</a> on github for an example app.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <ul>
 <li>Minimum API: 14 (Ice Cream Sandwich)</li>
 <li>Target API: 24 (N)</li>
-<li>SpotX publisher account</li>
-<li><a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">Apply to become a publisher</a></li>
+<li>SpotX publisher account - <a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">apply to become a publisher</a></li>
 </ul>
 <h2 id="before-you-begin">Before You Begin<a class="headerlink" href="#before-you-begin" title="Permanent link">#</a></h2>
 <ol>
-<li>You&rsquo;ll need to be a SpotX publisher if you aren&rsquo;t already.  You will
+<li>
+<p>You&rsquo;ll need to be a SpotX publisher if you aren&rsquo;t already.  You will
 receive  the SpotX SDK, a publisher ID, and an account to log into the <a href="https://publisher.spotxchange.com">SpotX
-Publisher Tools</a>.</li>
-<li>From the Publisher Tools you will be able to create &ldquo;channels&rdquo; that define the
+Publisher Tools</a>.</p>
+</li>
+<li>
+<p>From the Publisher Tools you will be able to create &ldquo;channels&rdquo; that define the
 entry point to connecting with advertisers.  You&rsquo;ll need to create a channel
 before you can use the SDK. Once a channel is created you will be given a
-channel ID and you use this channel ID to integrate with the SDK.</li>
-<li>Include the SpotX SDK as a dependency in your project in one of the following
-ways:</li>
-<li>Download the jar which contains the SpotX SDK Library, then - using Eclipse
-  or Android Studio - declare that jar as a file dependency.</li>
-<li>Using Gradle, include the following in your build.gradle file:</li>
+channel ID and you use this channel ID to integrate with the SDK.</p>
+</li>
 </ol>
-<div class="code"><pre><span></span>  repositories {
-      jcenter()
-  }
-  dependencies {
-        compile &#39;com.spotxchange:spotx-sdk-android:3.+&#39;
-  }
+<h2 id="install-the-sdk">Install the SDK<a class="headerlink" href="#install-the-sdk" title="Permanent link">#</a></h2>
+<h3 id="gradle-preferred">Gradle (preferred)<a class="headerlink" href="#gradle-preferred" title="Permanent link">#</a></h3>
+<p>Include the following in your <code>build.gradle</code> file:</p>
+<div class="code"><pre><span></span>repositories {
+    jcenter()
+}
+
+dependencies {
+    compile &#39;com.spotxchange:spotx-sdk-android:3.0.+&#39;
+}
 </pre></div>
 
 
-<p>You can always download the latest version of the SpotX SDK from <a href="https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view">Bintray</a>;
-the latest version of the SpotX Demo App is also available on our <a href="https://github.com/spotxmobile/spotx-demo-android">GitHub Repository</a>.</p>
+<h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">#</a></h3>
+<p>You can download the latest version from the <a href="https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view">SpotX Android SDK Bintray</a> and include it as a file dependency.</p>
+<p><a href="https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/_latestVersion"><img alt="Download" src="https://api.bintray.com/packages/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/images/download.svg" /> </a></p>
 <h2 id="setup-your-android-manifest">Setup Your Android Manifest<a class="headerlink" href="#setup-your-android-manifest" title="Permanent link">#</a></h2>
-<p>The <code>AndroidManifest.xml</code> file defines permissions for your applications.
-1. Add <code>INTERNET</code> permission to the manifest file for your app, if it&rsquo;s not
+<p>The <code>AndroidManifest.xml</code> file defines permissions for your applications.</p>
+<p>Add <code>INTERNET</code> permission to the manifest file for your app, if it&rsquo;s not
 already present.</p>
 <div class="code"><pre><span></span><span class="c">&lt;!--- REQUIRED FOR INTERNET ACCESS ---&gt;</span>
 <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 
 
-<ol>
-<li>Optionally, you may also include any or all the following permissions, which will
-improve your ad revenue.</li>
-</ol>
+<p>Optionally, you may also include any or all the following permissions, which will
+improve your ad revenue.</p>
 <div class="code"><pre><span></span><span class="c">&lt;!--  OPTIONAL PERMISSIONS --&gt;</span>
 <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> <span class="nt">/&gt;</span>
@@ -384,18 +401,14 @@ improve your ad revenue.</li>
 </pre></div>
 
 
-<ol>
-<li>Add the Google Mobile Ads API by editing your <code>build.gradle</code> file add adding the line:</li>
-</ol>
+<p>Add the Google Mobile Ads API by editing your <code>build.gradle</code> file add adding the line:</p>
 <div class="code"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
-       <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">ads</span><span class="o">:</span><span class="mf">9.2.0</span><span class="err">&#39;</span>
+    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">ads</span><span class="o">:</span><span class="mf">9.2.0</span><span class="err">&#39;</span>
 <span class="o">}</span>
 </pre></div>
 
 
-<ol>
-<li>Add the Google Play Services meta tag with the <code>&lt;application&gt;</code> tags.</li>
-</ol>
+<p>Add the Google Play Services meta tag with the <code>&lt;application&gt;</code> tags.</p>
 <div class="code"><pre><span></span><span class="c">&lt;!-- Example application --&gt;</span>
 <span class="nt">&lt;application</span>
     <span class="na">android:allowBackup=</span><span class="s">&quot;true&quot;</span>
@@ -410,11 +423,9 @@ improve your ad revenue.</li>
 </pre></div>
 
 
-<ol>
-<li>You&rsquo;re now ready to integrate with the SpotX SDK. Refer to the selections
-below for example integrations.</li>
-</ol>
-<h2 id="interstitial-ad-integration">Interstitial Ad Integration<a class="headerlink" href="#interstitial-ad-integration" title="Permanent link">#</a></h2>
+<p>You&rsquo;re now ready to integrate with the SpotX SDK. Refer to the selections
+below for example integrations.</p>
+<h2 id="ad-integration">Ad Integration<a class="headerlink" href="#ad-integration" title="Permanent link">#</a></h2>
 <p>An interstitial ad appears in a modal window, requiring the user to watch it
 before they can access other content.</p>
 <h4 id="1-initialize-the-spotx-sdk">1. Initialize the SpotX SDK<a class="headerlink" href="#1-initialize-the-spotx-sdk" title="Permanent link">#</a></h4>
@@ -430,11 +441,11 @@ before they can access other content.</p>
 <p>The <code>SpotXAdBuilder</code> is a builder class that creates an ad request. The only
 prerequisite to building an ad request is a channel id.  There are also methods
 available to add additional ad parameters; for more information on supported ad
-parameters see our <a href="https://github.com/spotxmobile/spotx-demo-android/wiki/Optional-Ad-Parameters">GitHub Documentation</a>.
+parameters see our <a href="../../android/sdk-advanced/#optional-ad-parameters">Advanced Documentation</a>.
 The <code>SpotXAdBuilder</code> also supports custom parameters; custom parameters are
 values that you can pass to us and report on later.  For more information on
 custom parameters, please contact a SpotX representative.</p>
-<h5 id="spotxadbuilder-minimum-requirements">SpotXAdBuilder Minimum Requirements<a class="headerlink" href="#spotxadbuilder-minimum-requirements" title="Permanent link">#</a></h5>
+<h4 id="spotxadbuilder-minimum-requirements">SpotXAdBuilder Minimum Requirements<a class="headerlink" href="#spotxadbuilder-minimum-requirements" title="Permanent link">#</a></h4>
 <div class="code"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
   <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
@@ -499,35 +510,40 @@ ads to play in succession, your integration might look like:</p>
 <p>The <code>SpotXAdGroup</code> is a container holding all of your ads and all those ad&rsquo;s
 information. When a <code>SpotXAdGroup</code> plays it will play all of your ads in
 succession. To resolve a <code>Future&lt;SpotXAdGroup</code> and get your <code>SpotXAdGroup</code> you
-will want to call the future&rsquo;s <code>get</code> method. There are two <code>get</code> methods:
-1. <code>get()</code> - blocks your application until the future resolves
-2. <code>get(long timeout, TimeUnit unit)</code> - blocks until the future resolves or until
-time has ran out.</p>
+will want to call the future&rsquo;s <code>get</code> method.</p>
+<p>There are two <code>get</code> methods:</p>
+<ol>
+<li><code>get()</code> - blocks your application until the future resolves</li>
+<li><code>get(long timeout, TimeUnit unit)</code> - blocks until the future resolves or until time has ran out.</li>
+</ol>
 <p>It is strongly recommended that you use a timeout when resolving a future.
 For more information review the <a href="https://developer.android.com/reference/java/util/concurrent/Future.html">Android Future Documentation</a>.</p>
 <div class="code"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
   <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+
   <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
   <span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
   <span class="n">SpotXAdBuilder</span> <span class="n">sab</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
   <span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">adGroupFuture</span> <span class="o">=</span> <span class="n">sab</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
   <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
   <span class="k">try</span> <span class="o">{</span>
     <span class="n">SpotXAdGroup</span> <span class="n">adGroup</span> <span class="o">=</span> <span class="n">adGroupFuture</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
   <span class="o">}</span>
   <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Handle exception</span>
   <span class="o">}</span>
-  <span class="c1">// Setup your app while we load ads in the background</span>
- <span class="err">```</span>
 
-<span class="err">####</span> <span class="mf">5.</span> <span class="n">Display</span> <span class="n">Your</span> <span class="n">Ad</span>
-<span class="n">Once</span> <span class="n">your</span> <span class="n">have</span> <span class="n">a</span> <span class="err">`</span><span class="n">SpotXAdGroup</span><span class="err">`</span> <span class="n">you</span> <span class="n">can</span> <span class="n">start</span> <span class="n">playing</span> <span class="n">ads</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="k">do</span> <span class="n">so</span> <span class="n">by</span>
-<span class="n">calling</span> <span class="n">one</span> <span class="n">of</span> <span class="n">our</span> <span class="n">presentation</span> <span class="n">controllers</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">wanted</span> <span class="n">to</span> <span class="n">play</span> <span class="n">an</span> <span class="n">interstitial</span>
-<span class="n">ad</span> <span class="n">your</span> <span class="n">integration</span> <span class="n">might</span> <span class="n">look</span> <span class="n">like</span><span class="o">:</span>
-<span class="err">```</span><span class="n">java</span>
-<span class="nd">@Override</span>
+  <span class="c1">// Setup your app while we load ads in the background</span>
+</pre></div>
+
+
+<h4 id="5-display-your-ad">5. Display Your Ad<a class="headerlink" href="#5-display-your-ad" title="Permanent link">#</a></h4>
+<p>Once your have a <code>SpotXAdGroup</code> you can start playing ads. You can do so by
+calling one of our presentation controllers. If you wanted to play an interstitial
+ad your integration might look like:</p>
+<div class="code"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
   <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
   <span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;12345&quot;</span><span class="o">;</span>
@@ -551,15 +567,17 @@ For more information review the <a href="https://developer.android.com/reference
 
 
 <h2 id="event-observer">Event Observer<a class="headerlink" href="#event-observer" title="Permanent link">#</a></h2>
-<p>There may be times where you would like to listen to events. Events include:
-<em> <code>onGroupStart()</code> - triggers before any ads starts playing
-</em> <code>onStart(SpotXAd ad)</code> - triggers when a single ad starts playing
-<em> <code>onError(SpotXAd ad)</code> - triggers if an error occurs during playtime
-</em> <code>onSkip(SpotXAd ad)</code> - triggers if an ad gets skipped
-<em> <code>onClick(SpotXAd ad)</code> - triggers if a user clicks through
-</em> <code>onTimeUpdate(SpotXAd ad, int elapsed)</code> - triggers periodically and will return the current ad and the current elapsed time of the ad in milliseconds.
-<em> <code>onComplete(SpotXAd)</code> - triggers when a single ad completes
-</em> <code>onGroupComplete()</code> - triggers after all ads complete</p>
+<p>There may be times where you would like to listen to events. Events include:</p>
+<ul>
+<li><code>onGroupStart()</code> - triggers before any ads starts playing</li>
+<li><code>onStart(SpotXAd ad)</code> - triggers when a single ad starts playing</li>
+<li><code>onError(SpotXAd ad)</code> - triggers if an error occurs during playtime</li>
+<li><code>onSkip(SpotXAd ad)</code> - triggers if an ad gets skipped</li>
+<li><code>onClick(SpotXAd ad)</code> - triggers if a user clicks through</li>
+<li><code>onTimeUpdate(SpotXAd ad, int elapsed)</code> - triggers periodically and will return the current ad and the current elapsed time of the ad in milliseconds.</li>
+<li><code>onComplete(SpotXAd)</code> - triggers when a single ad completes</li>
+<li><code>onGroupComplete()</code> - triggers after all ads complete</li>
+</ul>
 <p>We provide a <code>SpotXAdGroup.Observer</code> interface that you can implement to listen
 to these events. If this is of interest to you, then your integration might look
 like:</p>
@@ -646,7 +664,7 @@ like:</p>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href=".." title="Home">
+        <a href="../.." title="Home">
           <span class="direction">
             Previous
           </span>
@@ -665,7 +683,7 @@ like:</p>
     </div>
     <div class="next">
       
-        <a href="../android-sdk-advanced/" title="Advanced Documentation">
+        <a href="../sdk-advanced/" title="Advanced Documentation">
           <span class="direction">
             Next
           </span>
@@ -698,10 +716,10 @@ like:</p>
       </div>
     </main>
     <script>
-      var base_url = '..';
+      var base_url = '../..';
       var repo_id  = '';
     </script>
-    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
     
     
   </body>

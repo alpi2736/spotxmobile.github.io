@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Brightcove Android - SpotX Mobile</title>
+      
+      
+      
+        <link rel="canonical" href="https://spotxmobile.github.io/adapters/brightcove/android-adapter/">
+      
+      
+    
+    <meta property="og:url" content="https://spotxmobile.github.io/adapters/brightcove/android-adapter/">
+    <meta property="og:title" content="SpotX Mobile">
+    <meta property="og:image" content="https://spotxmobile.github.io/adapters/brightcove/android-adapter//../../../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../../../images/logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../../images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../../../../images/favicon.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../../assets/fonts/icon.eot?52m981');
+      	src: url('../../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../../../css/spotx.css">
+    
+    <script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-cyan">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Adapters <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Brightcove Android
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/spotxmobile" title="@spotxmobile on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../../../images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          SpotX Mobile
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Android</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../../../android/sdk/">
+      SDK Quick Start
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Advanced Documentation" href="../../../android/sdk-advanced/">
+      Advanced Documentation
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">iOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../../../ios/sdk/">
+      SDK Quick Start
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Apple tvOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="AVPlayer" href="../../../tvos/avplayer-sdk/">
+      AVPlayer
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="TVML" href="../../../tvos/tvml-sdk/">
+      TVML
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Adapters</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="MoPub Android" href="../../mopub/android-adapter/">
+      MoPub Android
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="MoPub iOS" href="../../mopub/ios-adapter/">
+      MoPub iOS
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Brightcove Android" href="./">
+      Brightcove Android
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Who Can Use the Adapter" href="#who-can-use-the-adapter">
+                Who Can Use the Adapter
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What the adapter Does" href="#what-the-adapter-does">
+                What the adapter Does
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="How to Install the Adapter" href="#how-to-install-the-adapter">
+                How to Install the Adapter
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Set Up" href="#set-up">
+                Set Up
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Configure" href="#configure">
+                Configure
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Usage" href="#usage">
+                Usage
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/spotxmobile" target="_blank" title="@spotxmobile on GitHub">
+                  @spotxmobile on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="brightcove-adapter-for-the-android-spotx-sdk">Brightcove Adapter for the Android SpotX SDK<a class="headerlink" href="#brightcove-adapter-for-the-android-spotx-sdk" title="Permanent link">#</a></h1>
+<h2 id="who-can-use-the-adapter">Who Can Use the Adapter<a class="headerlink" href="#who-can-use-the-adapter" title="Permanent link">#</a></h2>
+<p>To use the adapter, you need to be a SpotX publisher and use the Brightcove Player SDK for Android.
+If you are not already a SpotX publisher, <a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">apply to become a spotx publisher</a>.</p>
+<h2 id="what-the-adapter-does">What the adapter Does<a class="headerlink" href="#what-the-adapter-does" title="Permanent link">#</a></h2>
+<p>The adapter allows the <a href="../../../android/sdk">SpotX Android SDK</a> and the Brightcove Player SDK to work together so you can monetize your player&rsquo;s content.</p>
+<h2 id="how-to-install-the-adapter">How to Install the Adapter<a class="headerlink" href="#how-to-install-the-adapter" title="Permanent link">#</a></h2>
+<p>Follow the documentation for installing the <a href="../../../android/sdk/#install-the-sdk">SpotX Android SDK</a>.</p>
+<h2 id="set-up">Set Up<a class="headerlink" href="#set-up" title="Permanent link">#</a></h2>
+<p>To set up and use the SpotX adapter you need to initialize the SpotX SDK and construct the adapter with your publisher channel ID within your activity.</p>
+<div class="code"><pre><span></span><span class="c1">// init SpotX</span>
+<span class="n">SpotX</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
+
+<span class="c1">// construct adapter</span>
+<span class="n">String</span> <span class="n">channelId</span> <span class="o">=</span> <span class="s">&quot;85394&quot;</span><span class="o">;</span>
+<span class="n">EventEmitter</span> <span class="n">emitter</span> <span class="o">=</span> <span class="n">brightcoveVideoView</span><span class="o">.</span><span class="na">getEventEmitter</span><span class="o">()</span>
+<span class="n">SpotXBrightcoveAdapter</span> <span class="n">spotxAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SpotXBrightcoveAdapter</span><span class="o">(</span><span class="n">emitter</span><span class="o">,</span> <span class="k">this</span><span class="o">,</span> <span class="n">channelId</span><span class="o">);</span>
+</pre></div>
+
+
+<p>You can set the number of ads that the adapter will play be setting the <code>adCount</code> property to value greater than 1.</p>
+<div class="code"><pre><span></span><span class="n">spotxAdapter</span><span class="o">.</span><span class="na">adCount</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">// default: 1 ad</span>
+</pre></div>
+
+
+<p>You can also specify the duration of ads in seconds you would like to play that will override the set count by setting <code>adDuration</code>.</p>
+<div class="code"><pre><span></span><span class="n">spotxAdapter</span><span class="o">.</span><span class="na">adDuration</span> <span class="o">=</span> <span class="mi">90</span><span class="o">;</span> <span class="c1">// default: 0 seconds</span>
+</pre></div>
+
+
+<p>If you want to customize the timeout length for loading an ad you can set the <code>adLoadTimeoutSeconds</code> property.</p>
+<div class="code"><pre><span></span><span class="n">spotxAdapter</span><span class="o">.</span><span class="na">adLoadTimeoutSeconds</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span> <span class="c1">// default: 10 seconds</span>
+</pre></div>
+
+
+<h2 id="configure">Configure<a class="headerlink" href="#configure" title="Permanent link">#</a></h2>
+<p>If you wish to set additional settings such as <code>useHTTPS</code> you can access the <code>SpotXAdBuilder</code> with the function <code>getAdBuilder()</code>.</p>
+<div class="code"><pre><span></span><span class="n">spotxAdapter</span><span class="o">.</span><span class="na">getAdBuilder</span><span class="o">().</span><span class="na">useHTTPS</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</pre></div>
+
+
+<p>To learn more about the additional settings and parameters you can pass, check out the <a href="../../../android/sdk/#ad-integration">SpotX SDK Android Documentation</a>.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<p>You can look at the <a href="https://github.com/spotxmobile/spotx-demo-android">SpotX Demo App</a> on how to integrate the  Brightcove adapter, or you can follow <a href="https://github.com/BrightcoveOS/android-plugin-guide/blob/master/sample/SamplePluginApplication/src/main/java/com/brightcove/player/application/MainActivity.java">Brightcove&rsquo;s sample app</a> on how to configure and use the adapter with the Brightcove SDK.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 SpotXchange, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../mopub/ios-adapter/" title="MoPub iOS">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                MoPub iOS
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

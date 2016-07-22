@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://spotxmobile.github.io/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,24 +12,14 @@
     
         
     <url>
-     <loc>https://spotxmobile.github.io/android-sdk/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <loc>https://spotxmobile.github.io/android/sdk/</loc>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://spotxmobile.github.io/android-sdk-advanced/</loc>
-     <lastmod>2016-07-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://spotxmobile.github.io/ios-sdk/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <loc>https://spotxmobile.github.io/android/sdk-advanced/</loc>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -38,14 +28,8 @@
     
         
     <url>
-     <loc>https://spotxmobile.github.io/avplayer-sdk/</loc>
-     <lastmod>2016-07-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://spotxmobile.github.io/tvml-sdk/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <loc>https://spotxmobile.github.io/ios/sdk/</loc>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -54,14 +38,36 @@
     
         
     <url>
-     <loc>https://spotxmobile.github.io/android-mopub-adapter/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <loc>https://spotxmobile.github.io/tvos/avplayer-sdk/</loc>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://spotxmobile.github.io/ios-mopub-adapter/</loc>
-     <lastmod>2016-07-08</lastmod>
+     <loc>https://spotxmobile.github.io/tvos/tvml-sdk/</loc>
+     <lastmod>2016-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://spotxmobile.github.io/adapters/mopub/android-adapter/</loc>
+     <lastmod>2016-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://spotxmobile.github.io/adapters/mopub/ios-adapter/</loc>
+     <lastmod>2016-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://spotxmobile.github.io/adapters/brightcove/android-adapter/</loc>
+     <lastmod>2016-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
