@@ -2,47 +2,54 @@
 
 Example code and tutorial for displaying SpotX video ads in Android apps.
 
+Check out the [SpotX Demo App](https://github.com/spotxmobile/spotx-demo-android) on github for an example app.
+
 ## Prerequisites
 * Minimum API: 14 (Ice Cream Sandwich)
 * Target API: 24 (N)
-* SpotX publisher account
-  * [Apply to become a publisher](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/)
+* SpotX publisher account - [apply to become a publisher](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/)
 
 ## Before You Begin
 1. You'll need to be a SpotX publisher if you aren't already.  You will
 receive  the SpotX SDK, a publisher ID, and an account to log into the [SpotX
 Publisher Tools](https://publisher.spotxchange.com).
+
 2. From the Publisher Tools you will be able to create "channels" that define the
 entry point to connecting with advertisers.  You'll need to create a channel
 before you can use the SDK. Once a channel is created you will be given a
 channel ID and you use this channel ID to integrate with the SDK.
-3. Include the SpotX SDK as a dependency in your project in one of the following
-ways:
-  * Download the jar which contains the SpotX SDK Library, then - using Eclipse
-  or Android Studio - declare that jar as a file dependency.
-  * Using Gradle, include the following in your build.gradle file:
+
+## Install the SDK
+
+### Gradle (preferred)
+Include the following in your `build.gradle` file:
 
 ```
-  repositories {
-      jcenter()
-  }
-  dependencies {
-        compile 'com.spotxchange:spotx-sdk-android:3.+'
-  }
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.spotxchange:spotx-sdk-android:3.0.+'
+}
 ```
 
-You can always download the latest version of the SpotX SDK from [Bintray](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view);
-the latest version of the SpotX Demo App is also available on our [GitHub Repository](https://github.com/spotxmobile/spotx-demo-android).
+### Manual Installation
+
+You can download the latest version from the [SpotX Android SDK Bintray](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/view) and include it as a file dependency.
+
+[![Download](https://api.bintray.com/packages/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/images/download.svg) ](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-sdk-android/_latestVersion)
 
 ## Setup Your Android Manifest
 The `AndroidManifest.xml` file defines permissions for your applications.
-1. Add `INTERNET` permission to the manifest file for your app, if it's not
+
+Add `INTERNET` permission to the manifest file for your app, if it's not
 already present.
 ```xml
 <!--- REQUIRED FOR INTERNET ACCESS --->
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-2. Optionally, you may also include any or all the following permissions, which will
+Optionally, you may also include any or all the following permissions, which will
 improve your ad revenue.
 ```xml
 <!--  OPTIONAL PERMISSIONS -->
@@ -52,14 +59,14 @@ improve your ad revenue.
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
 
-3. Add the Google Mobile Ads API by editing your `build.gradle` file add adding the line:
+Add the Google Mobile Ads API by editing your `build.gradle` file add adding the line:
 ```java
 dependencies {
-       compile 'com.google.android.gms:play-services-ads:9.2.0'
+    compile 'com.google.android.gms:play-services-ads:9.2.0'
 }
 ```
 
-4. Add the Google Play Services meta tag with the `<application>` tags.
+Add the Google Play Services meta tag with the `<application>` tags.
 
 ```xml
 <!-- Example application -->
@@ -74,7 +81,8 @@ dependencies {
         android:value="@integer/google_play_services_version" />
 </application>
 ```
-4. You're now ready to integrate with the SpotX SDK. Refer to the selections
+
+You're now ready to integrate with the SpotX SDK. Refer to the selections
 below for example integrations.
 
 ## Ad Integration
@@ -93,7 +101,7 @@ protected void onCreate(Bundle savedInstanceState) {
 The `SpotXAdBuilder` is a builder class that creates an ad request. The only
 prerequisite to building an ad request is a channel id.  There are also methods
 available to add additional ad parameters; for more information on supported ad
-parameters see our [GitHub Documentation](https://github.com/spotxmobile/spotx-demo-android/wiki/Optional-Ad-Parameters).
+parameters see our [Advanced Documentation](/android/sdk-advanced/#optional-ad-parameters).
 The `SpotXAdBuilder` also supports custom parameters; custom parameters are
 values that you can pass to us and report on later.  For more information on
 custom parameters, please contact a SpotX representative.
@@ -109,6 +117,7 @@ protected void onCreate(Bundle savedInstanceState) {
   SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
 }
 ```
+
 
 #### SpotXAdBuilder With Additional Ad Parameters
 ```java
@@ -166,10 +175,12 @@ protected void onCreate(Bundle savedInstanceState) {
 The `SpotXAdGroup` is a container holding all of your ads and all those ad's
 information. When a `SpotXAdGroup` plays it will play all of your ads in
 succession. To resolve a `Future<SpotXAdGroup` and get your `SpotXAdGroup` you
-will want to call the future's `get` method. There are two `get` methods:
+will want to call the future's `get` method.
+
+There are two `get` methods:
+
 1. `get()` - blocks your application until the future resolves
-2. `get(long timeout, TimeUnit unit)` - blocks until the future resolves or until
-time has ran out.
+2. `get(long timeout, TimeUnit unit)` - blocks until the future resolves or until time has ran out.
 
 It is strongly recommended that you use a timeout when resolving a future.
 For more information review the [Android Future Documentation](https://developer.android.com/reference/java/util/concurrent/Future.html).
@@ -178,19 +189,23 @@ For more information review the [Android Future Documentation](https://developer
 @Override
 protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
+
   String channelId = "12345";
   SpotX.initialize(getApplicationContext());
   SpotXAdBuilder sab = SpotX.newAdBuilder(channelId);
   Future<SpotXAdGroup> adGroupFuture = sab.loadWithCount(2);
   SpotXAdGroup adGroup = null;
+
   try {
     SpotXAdGroup adGroup = adGroupFuture.get(10000, TimeUnit.MILLISECONDS);
   }
   catch(Exception e) {
     // Handle exception
   }
+
   // Setup your app while we load ads in the background
- ```
+
+```
 
 #### 5. Display Your Ad
 Once your have a `SpotXAdGroup` you can start playing ads. You can do so by

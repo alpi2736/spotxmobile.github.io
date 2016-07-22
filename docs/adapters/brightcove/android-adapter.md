@@ -7,37 +7,11 @@ If you are not already a SpotX publisher, [apply to become a spotx publisher](ht
 
 ## What the adapter Does
 
-The adapter allows the [SpotX SDK](/android/sdk) and the Brightcove Player SDK to work together so you can monetize your player's content.
+The adapter allows the [SpotX Android SDK](/android/sdk) and the Brightcove Player SDK to work together so you can monetize your player's content.
 
 ## How to Install the Adapter
 
-There are three ways to install this adapter:
-
-### Gradle Dependency (preferred)
-
-Simply add the following to your build.gradle.
-
-```groovy
-compile 'com.spotxchange:spotx-brightcove:3.0.+'
-```
-
-### Maven Dependency
-
-Declare the dependency in Maven:
-
-```xml
-<dependency>
-    <groupId>com.spotxchange</groupId>
-    <artifactId>spotx-brightcove</artifactId>
-    <version>3.0</version>
-</dependency>
-```
-
-### As a Library Project
-
-Download the library and import it as a library project in Android Studio or Eclipse. The library is available from our [bintray repo](https://bintray.com/spotxmobile/maven/com.spotxchange%3Aspotx-brightcove).
-
-Get more information on how to do this at the [Android Developer Docs](http://developer.android.com/tools/projects/index.html#LibraryProjects).
+Follow the documentation for installing the [SpotX Android SDK](/android/sdk/#install-the-sdk).
 
 ## Set Up
 
