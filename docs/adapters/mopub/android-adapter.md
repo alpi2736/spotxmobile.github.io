@@ -28,6 +28,40 @@ Get step-by-step instructions on how to specify parameters through the [MoPub De
 
 For more information on the SpotX Android SDK check out the [Documentation](/android/sdk/#setup-your-android-manifest).
 
+### Interstitial
+You will need to specify the Custom Event Class for interstitial videos:
+```java
+com.spotxchange.v3.adapters.mopub.SpotXInterstitial
+```
+
+Your Custom Event Class Data field will look something like the following:
+```json
+{
+  "channel_id":"12345",
+  "app_domain":"com.mycompany.myapp"
+}
+```
+
+### Rewarded Video
+You will need to specify the Custom Event Class for rewarded videos:
+```
+com.spotxchange.v3.adapters.mopub.SpotXRewardedVideo
+```
+
+Your Custom Event Class Data field will look something like the following:
+
+```json
+{
+  "channel_id":"12345",
+  "app_domain":"com.mycompany.myapp",
+  "iab_category":"IAB1",
+  "iab_section":"UNKNOWN",
+  "appstore_url":"www.appstore.com",
+  "app_url":"https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789",
+  "custom_param":"custom_value"
+}
+```
+
 ## Usage
 
 You can look at the [SpotX Demo App](https://github.com/spotxmobile/spotx-demo-android) on how to integrate the MoPub adapter.
