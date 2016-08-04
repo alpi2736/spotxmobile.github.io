@@ -48,7 +48,7 @@ If you wish to set additional settings such as `useHTTPS` you can access the `Sp
 spotxAdapter.getAdBuilder().useHTTPS = true;
 ```
 
-To learn more about the additional settings and parameters you can pass, check out the [SpotX SDK Android Documentation](/android/sdk/#ad-integration).
+To learn more about the additional settings and parameters you can pass, check out the [SpotX SDK Android Documentation](/android/sdk/#ad-integration) and the [Advanced Android Documentation](/android/sdk-advanced/).
 
 ## Usage
 
