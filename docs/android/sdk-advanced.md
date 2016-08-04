@@ -6,12 +6,12 @@ You may specify additional parameters to refine your ad request with SpotX. The 
 
 | Parameter | Description |
 | --- | --- |
-|app[cat]|Array of [IAB content categories](#iab-categories) for the overall application.|
-|app[privacypolicy]|Specifies whether the app has a privacy policy. “1” means there is a policy and “0” means there is not.|
-|app[storeurl]|For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request.|
-|app[content][language]|Language of the content. Use alpha-2/ISO 639-1 codes.|
-|app[content][contentrating]|Content rating (e.g., MPAA)|
-|device[dnt]|If "1" then tracking is set to true, "0" for false.|
+|app[cat]|A string of the [IAB content categorie](#iab-categories) for the overall application. (e.g. `"IAB1"`)|
+|app[privacypolicy]|Specifies whether the app has a privacy policy. `"1"` means there is a policy and `"0"` means there is not.|
+|app[storeurl]|For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request. (e.g. `"https://play.google.com/store/apps/details?id=com.mydomain.myapp"`)|
+|app[content][language]|Language of the content. Use [alpha-2/ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (e.g. `"en"`).|
+|app[content][contentrating]|MPAA Content rating: `"G"`, `"PG"`, `"PG-13"`, `"R"`, `"NC-17"` |
+|device[dnt]|If `"1"` then tracking is set to true, `"0"` for false.|
 
 ## IAB Categories
 | Parameter | Category |
