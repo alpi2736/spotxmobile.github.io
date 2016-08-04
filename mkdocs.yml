@@ -10,8 +10,10 @@ pages:
   - Android:
     - SDK Quick Start: 'android/sdk.md'
     - Advanced Documentation: 'android/sdk-advanced.md'
+    - Release Notes: 'android/release-notes.md'
   - iOS:
     - SDK Quick Start: 'ios/sdk.md'
+    - Release Notes: 'ios/release-notes.md'
   - Apple tvOS:
     - AVPlayer: 'tvos/avplayer-sdk.md'
     - TVML: 'tvos/tvml-sdk.md'
