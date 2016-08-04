@@ -121,6 +121,41 @@
             "title": "IAB Categories"
         }, 
         {
+            "location": "/android/release-notes/", 
+            "text": "Release Notes For SpotX Android SDK\n#\n\n\nLatest version: \n3.0.4\n released on \n2016-08-03\n\n\nv3.0.4\n#\n\n\n\n\nFixed issue with deal device targeting.\n\n\nRemoved \nno media file\n assertion.\n\n\nFixed VAST wrapper parsing.\n\n\nRemoved \ndevice[os]\n and \ndevice[devicetype]\n request parameters.\n\n\nAdded \nplayer_width\n and \nplayer_height\n request parameters.\n\n\n\n\nv3.0.3\n#\n\n\n\n\nRemoved the \ndevice[didsha1]\n and \ndevice[ip]\n request parameters.\n\n\nAdded Support for \nMoPub\n and \nBrightcove\n adapters.\n\n\n\n\nv3.0.2\n#\n\n\n\n\nAdded the \nX-Device-User-Agent\n header to all network requests.\n\n\nAdded \ndevice[ua]\n to the request parameters.\n\n\n\n\nv3.0.1\n#\n\n\n\n\nIn-content playback starts when \n 50%\n of the player is in view and stops when \n 50%\n.\n\n\n\n\nv3.0.0\n#\n\n\n\n\nNew SDK, supports playing video ads natively either interstitial or in-content.", 
+            "title": "Release Notes"
+        }, 
+        {
+            "location": "/android/release-notes/#release-notes-for-spotx-android-sdk", 
+            "text": "Latest version:  3.0.4  released on  2016-08-03", 
+            "title": "Release Notes For SpotX Android SDK"
+        }, 
+        {
+            "location": "/android/release-notes/#v304", 
+            "text": "Fixed issue with deal device targeting.  Removed  no media file  assertion.  Fixed VAST wrapper parsing.  Removed  device[os]  and  device[devicetype]  request parameters.  Added  player_width  and  player_height  request parameters.", 
+            "title": "v3.0.4"
+        }, 
+        {
+            "location": "/android/release-notes/#v303", 
+            "text": "Removed the  device[didsha1]  and  device[ip]  request parameters.  Added Support for  MoPub  and  Brightcove  adapters.", 
+            "title": "v3.0.3"
+        }, 
+        {
+            "location": "/android/release-notes/#v302", 
+            "text": "Added the  X-Device-User-Agent  header to all network requests.  Added  device[ua]  to the request parameters.", 
+            "title": "v3.0.2"
+        }, 
+        {
+            "location": "/android/release-notes/#v301", 
+            "text": "In-content playback starts when   50%  of the player is in view and stops when   50% .", 
+            "title": "v3.0.1"
+        }, 
+        {
+            "location": "/android/release-notes/#v300", 
+            "text": "New SDK, supports playing video ads natively either interstitial or in-content.", 
+            "title": "v3.0.0"
+        }, 
+        {
             "location": "/ios/sdk/", 
             "text": "SpotX iOS SDK Quick Start\n#\n\n\nPrerequisites\n#\n\n\nYou\nll need to apply to become a SpotX publisher if you haven\nt already. You\nll receive the SpotXchange\ns SDK, a publisher channel ID, and an account to log in to \nSpotXchange\ns Publisher Tools\n.\n\n\n\n\nApply to become a SpotX Publisher\n\n\n\n\nWhat You Need\n#\n\n\n\n\nAn IAB Category number that best categorizes your app (ex: \nIAB1\n)\n\n\nIAB Specification\n (section 6.1 page 54)\n\n\nIAB Category List\n\n\n\n\n\n\nYour App domain\n\n\nex: http://www.example.com\n\n\n\n\n\n\nYour App Store URL\n\n\nex: https://itunes.apple.com/us/app/example/id123456789\n\n\n\n\n\n\nXcode 6\n\n\n\n\nGetting Started\n#\n\n\nInstallation with CocoaPods\n#\n\n\nInstallation with \nCocoaPods\n is an alternative to downloading the SDK. CocoaPods is a dependency manager for iOS and Mac apps, which automates and simplifies the process of using 3rd-party libraries in your projects.\n\n\npod\n \nSpotX-SDK\n\n\n\n\n\n\nManual Installation\n#\n\n\nDownload the latest SDK from the SpotX \nGithub Repository\n.\n\n\nThe SpotX SDK makes use of many iOS core frameworks. Add the following frameworks to your app:\n\n\n\n\nAdManager.framework\n\n\nAdSupport.framework\n\n\nCoreData.framework\n\n\nCoreGraphics.framework\n\n\nCoreLocation.framework\n\n\nCoreTelephony.framework\n\n\nEventKit.framework\n\n\nFoundation.framework\n\n\nSystemConfiguration.framework\n\n\nSecurity.framework\n\n\nUIKit.framework\n\n\n\n\nUnder \nBuild Settings \n Other Linker Flags\n set the following flag:\n\n\n-all_load\n\n\n\n\n\nUsing the SDK\n#\n\n\nInitialize the SpotX SDK\n#\n\n\n// File: AppDelegate.m\n\n\n\n#import \nUIKit/UIKit.h\n\n\n#import \nAdManager/SpotX.h\n\n\n\n@implementation\n \nAppDelegate\n\n\n\n-\n \n(\nBOOL\n)\napplication:\n(\nUIApplication\n \n*\n)\napplication\n \ndidFinishLaunchingWithOptions:\n(\nNSDictionary\n \n*\n)\nlaunchOptions\n\n\n{\n\n    \n// Required: Initialize SpotX SDK\n\n    \n[\nSpotX\n \ninitializeWithApiKey\n:\nnil\n \ncategory\n:\n@\nIAB1\n \nsection\n:\n@\nFiction\n\n        \ndomain\n:\n@\nwww.spotxchange.com\n\n            \nurl\n:\n@\nhttps://itunes.apple.com/us/app/spotxchange_advertisments/id123456789\n];\n\n\n    \n// Optional: Set default channel id\n\n    \n[\nSpotX\n \nsetDefaultChannelID\n:\n110681\n];\n\n\n    \n// Optional: Configure default settings\n\n    \nid\nSpotXAdSettings\n \nsettings\n \n=\n \n[\nSpotX\n \ndefaultSettings\n];\n\n    \nsettings\n.\nuseHTTPS\n \n=\n \n@YES\n;\n\n    \nsettings\n.\nuseNativeBrowser\n \n=\n \n@YES\n;\n\n    \nsettings\n.\nallowCalendar\n \n=\n \n@NO\n;\n\n\n    \n// Optional: Configure default custom parameters (Custom Taxonomy)\n\n    \n[\nSpotX\n \nsetDefaultParameters\n:\n@{\n\n        \n@\ncustom_param\n:\n \n@\ncustom_value\n\n    \n}\n];\n\n\n    \nreturn\n \nYES\n;\n\n\n}\n\n\n\n@end\n\n\n\n\n\n\nShow an Ad\n#\n\n\n// File: ViewController.m\n\n\n\n#import \nViewController.h\n\n\n\n#import \nAdManager/SpotX.h\n\n\n\n\n@interface\n \nViewController\n \n()\n \nSpotXAdDelegate\n\n\n\n@property\n \n(\nnonatomic\n,\n \nstrong\n)\n \nSpotXAdView\n \n*\nadView\n;\n\n\n\n@end\n\n\n\n\n@implementation\n \nViewController\n\n\n\n-\n \n(\nvoid\n)\nviewDidLoad\n\n\n{\n\n    \n[\nsuper\n \nviewDidLoad\n];\n\n\n    \n// NOTE: We create a SpotXView and call -startLoading right away\n\n    \n//       so it is cached when we are ready to show it.\n\n    \n_adView\n \n=\n \n[[\nSpotXView\n \nalloc\n]\n \ninitWithFrame\n:\nself\n.\nview\n.\nbounds\n];\n\n     \n_adView\n.\ndelegate\n \n=\n \nself\n;\n\n     \n[\n_adView\n \nstartLoading\n];\n\n\n}\n\n\n\n-\n \n(\nvoid\n)\nshowAd\n\n\n{\n\n    \n// Show the Ad. If the ad is still loading, it may take a\n\n    \n// few seconds for the video to start.\n\n    \n[\nself\n.\nadView\n \nshow\n];\n\n\n}\n\n\n\n\n#pragma mark - SpotXAdViewDelegate\n\n\n\n-\n \n(\nvoid\n)\npresentViewController:\n(\nUIViewController\n \n*\n)\nviewControllerToPresent\n\n\n{\n\n    \n[\nself\n \npresentViewController\n:\nviewControllerToPresent\n \nanimated\n:\nYES\n \ncompletion\n:\nnil\n];\n\n\n}\n\n\n\n-\n \n(\nvoid\n)\nadLoaded\n\n\n{\n\n  \nNSLog\n(\n@\nAd is cached and ready to play\n);\n\n\n}\n\n\n\n@end", 
             "title": "SDK Quick Start"
@@ -169,6 +204,41 @@
             "location": "/ios/sdk/#show-an-ad", 
             "text": "// File: ViewController.m  #import  ViewController.h  #import  AdManager/SpotX.h  @interface   ViewController   ()   SpotXAdDelegate  @property   ( nonatomic ,   strong )   SpotXAdView   * adView ;  @end  @implementation   ViewController  -   ( void ) viewDidLoad  { \n     [ super   viewDidLoad ]; \n\n     // NOTE: We create a SpotXView and call -startLoading right away \n     //       so it is cached when we are ready to show it. \n     _adView   =   [[ SpotXView   alloc ]   initWithFrame : self . view . bounds ]; \n      _adView . delegate   =   self ; \n      [ _adView   startLoading ];  }  -   ( void ) showAd  { \n     // Show the Ad. If the ad is still loading, it may take a \n     // few seconds for the video to start. \n     [ self . adView   show ];  }  #pragma mark - SpotXAdViewDelegate  -   ( void ) presentViewController: ( UIViewController   * ) viewControllerToPresent  { \n     [ self   presentViewController : viewControllerToPresent   animated : YES   completion : nil ];  }  -   ( void ) adLoaded  { \n   NSLog ( @ Ad is cached and ready to play );  }  @end", 
             "title": "Show an Ad"
+        }, 
+        {
+            "location": "/ios/release-notes/", 
+            "text": "Release Notes For SpotX iOS SDK\n#\n\n\nLatest version: \n2.2.4\n released on \n2016-08-04\n\n\n2.2.4\n#\n\n\n\n\nUpdated to new \nmraid.js\n url.\n\n\nFixed issue with deal device targeting.\n\n\nRemoved \ndevice[didsha1]\n and \ndevice[dpidsha1]\n request parameters.\n\n\n\n\n2.2.3\n#\n\n\n\n\nRemoved \ndevice[ip]\n and \nmedia_transcoding\n from request parameters.\n\n\nAdded the \nX-Device-User-Agent\n header to all network requests.\n\n\nAdded \ndevice[ua]\n and \npreload=0\n to the request parameters.\n\n\n\n\n2.2.2\n#\n\n\n\n\nFixed memory issues.\n\n\nAdded public function \n[SpotXView -dispose]\n to explicitly release WebView resources.\n\n\n\n\n2.2.1\n#\n\n\n\n\nHTTPS fix for \nmraid.js\n.\n\n\nAdded bitcode support.\n\n\nTurn off module debug symbols because of Xcode 7.\n\n\n\n\n2.2.0\n#\n\n\n\n\nAdd support for \nend_slate\n parameter.\n\n\nAdded \ndevice[\"lang\"]\n to request parameters.\n\n\nIn-content playback starts when \n 50%\n of the player is in view and stops when \n 50%\n.\n\n\nUsing new v1 endpoint of \nmraid.js\n url.", 
+            "title": "Release Notes"
+        }, 
+        {
+            "location": "/ios/release-notes/#release-notes-for-spotx-ios-sdk", 
+            "text": "Latest version:  2.2.4  released on  2016-08-04", 
+            "title": "Release Notes For SpotX iOS SDK"
+        }, 
+        {
+            "location": "/ios/release-notes/#224", 
+            "text": "Updated to new  mraid.js  url.  Fixed issue with deal device targeting.  Removed  device[didsha1]  and  device[dpidsha1]  request parameters.", 
+            "title": "2.2.4"
+        }, 
+        {
+            "location": "/ios/release-notes/#223", 
+            "text": "Removed  device[ip]  and  media_transcoding  from request parameters.  Added the  X-Device-User-Agent  header to all network requests.  Added  device[ua]  and  preload=0  to the request parameters.", 
+            "title": "2.2.3"
+        }, 
+        {
+            "location": "/ios/release-notes/#222", 
+            "text": "Fixed memory issues.  Added public function  [SpotXView -dispose]  to explicitly release WebView resources.", 
+            "title": "2.2.2"
+        }, 
+        {
+            "location": "/ios/release-notes/#221", 
+            "text": "HTTPS fix for  mraid.js .  Added bitcode support.  Turn off module debug symbols because of Xcode 7.", 
+            "title": "2.2.1"
+        }, 
+        {
+            "location": "/ios/release-notes/#220", 
+            "text": "Add support for  end_slate  parameter.  Added  device[\"lang\"]  to request parameters.  In-content playback starts when   50%  of the player is in view and stops when   50% .  Using new v1 endpoint of  mraid.js  url.", 
+            "title": "2.2.0"
         }, 
         {
             "location": "/tvos/avplayer-sdk/", 

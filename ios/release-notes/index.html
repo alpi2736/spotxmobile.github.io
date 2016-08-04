@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>TVML - SpotX Mobile</title>
+        <title>Release Notes - SpotX Mobile</title>
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/tvos/tvml-sdk/">
+        <link rel="canonical" href="https://spotxmobile.github.io/ios/release-notes/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/tvos/tvml-sdk/">
+    <meta property="og:url" content="https://spotxmobile.github.io/ios/release-notes/">
     <meta property="og:title" content="SpotX Mobile">
-    <meta property="og:image" content="https://spotxmobile.github.io/tvos/tvml-sdk//../../images/logo.png">
+    <meta property="og:image" content="https://spotxmobile.github.io/ios/release-notes//../../images/logo.png">
     <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -94,12 +94,12 @@
           <span class="path">
             
               
-                Apple tvOS <i class="icon icon-link"></i>
+                iOS <i class="icon icon-link"></i>
               
             
           </span>
         
-        TVML
+        Release Notes
       </div>
     </div>
     
@@ -209,7 +209,7 @@
       
         
   <li>
-    <a class="" title="SDK Quick Start" href="../../ios/sdk/">
+    <a class="" title="SDK Quick Start" href="../sdk/">
       SDK Quick Start
     </a>
     
@@ -218,9 +218,48 @@
       
         
   <li>
-    <a class="" title="Release Notes" href="../../ios/release-notes/">
+    <a class="current" title="Release Notes" href="./">
       Release Notes
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="2.2.4" href="#224">
+                2.2.4
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="2.2.3" href="#223">
+                2.2.3
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="2.2.2" href="#222">
+                2.2.2
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="2.2.1" href="#221">
+                2.2.1
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="2.2.0" href="#220">
+                2.2.0
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -236,7 +275,7 @@
       
         
   <li>
-    <a class="" title="AVPlayer" href="../avplayer-sdk/">
+    <a class="" title="AVPlayer" href="../../tvos/avplayer-sdk/">
       AVPlayer
     </a>
     
@@ -245,36 +284,9 @@
       
         
   <li>
-    <a class="current" title="TVML" href="./">
+    <a class="" title="TVML" href="../../tvos/tvml-sdk/">
       TVML
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Prerequisites" href="#prerequisites">
-                Prerequisites
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Presenting an Ad in a Native App" href="#presenting-an-ad-in-a-native-app">
-                Presenting an Ad in a Native App
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Presenting an Ad in a TVML App" href="#presenting-an-ad-in-a-tvml-app">
-                Presenting an Ad in a TVML App
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -343,68 +355,38 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="spotx-tvos-integration">SpotX tvOS Integration<a class="headerlink" href="#spotx-tvos-integration" title="Permanent link">#</a></h1>
-<p>Monetize your tvOS app with SpotX!</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+          <h1 id="release-notes-for-spotx-ios-sdk">Release Notes For SpotX iOS SDK<a class="headerlink" href="#release-notes-for-spotx-ios-sdk" title="Permanent link">#</a></h1>
+<p>Latest version: <code>2.2.4</code> released on <strong>2016-08-04</strong></p>
+<h2 id="224">2.2.4<a class="headerlink" href="#224" title="Permanent link">#</a></h2>
 <ul>
-<li>Xcode 7.1.1</li>
-<li>SpotX publisher account<ul>
-<li><a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">Apply to become a SpotX Publisher</a></li>
+<li>Updated to new <code>mraid.js</code> url.</li>
+<li>Fixed issue with deal device targeting.</li>
+<li>Removed <code>device[didsha1]</code> and <code>device[dpidsha1]</code> request parameters.</li>
 </ul>
-</li>
+<h2 id="223">2.2.3<a class="headerlink" href="#223" title="Permanent link">#</a></h2>
+<ul>
+<li>Removed <code>device[ip]</code> and <code>media_transcoding</code> from request parameters.</li>
+<li>Added the <code>X-Device-User-Agent</code> header to all network requests.</li>
+<li>Added <code>device[ua]</code> and <code>preload=0</code> to the request parameters.</li>
 </ul>
-<h2 id="presenting-an-ad-in-a-native-app">Presenting an Ad in a Native App<a class="headerlink" href="#presenting-an-ad-in-a-native-app" title="Permanent link">#</a></h2>
-<ol>
-<li>Include SpotXAd.swift in your project. Don&rsquo;t worry, there are no additional dependencies.</li>
-<li>Instantiate a SpotXAd instance with your publisher channel ID and any additional parameters you wish to collect.</li>
-<li>Attach an implementation of the SpotXAdDelegate protocol, if you are interested in Ad lifecycle events.</li>
-<li>Present the Ad by calling SpotXAd.show().</li>
-</ol>
-<div class="code"><pre><span></span><span class="kd">static</span> <span class="kd">let</span> <span class="nv">CHANNEL_ID</span> <span class="p">=</span> <span class="s">&quot;85394&quot;</span>
-
-<span class="kd">func</span> <span class="nf">playAd</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span> <span class="p">=</span> <span class="n">SpotXAd</span><span class="p">(</span><span class="n">channelId</span><span class="p">:</span> <span class="n">CHANNEL_ID</span><span class="p">,</span> <span class="n">delegate</span><span class="p">:</span> <span class="kc">self</span><span class="p">)</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">ad</span><span class="p">?.</span><span class="n">show</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h2 id="presenting-an-ad-in-a-tvml-app">Presenting an Ad in a TVML App<a class="headerlink" href="#presenting-an-ad-in-a-tvml-app" title="Permanent link">#</a></h2>
-<ol>
-<li>Load the SpotX SDK. Don&rsquo;t worry, there are no additional dependencies.</li>
-<li>Load up a SpotX Ad with your publisher channel ID.</li>
-<li>Add any additional parameters you wish to collect.</li>
-<li>Pass a callback to receive the SpotXAdPlayer.</li>
-<li>Add event listeners to the player, if you are interested in Ad lifecycle events.</li>
-<li>Present the Ad by calling <code>player.standalone().play()</code>.</li>
-</ol>
-<div class="code"><pre><span></span><span class="c1">// NOTE: Subject to change after prerelease development</span>
-<span class="kd">var</span> <span class="nx">SPOTX_SDK</span> <span class="o">=</span> <span class="s1">&#39;https://m.spotx.ninja/tvos/v2/sdk.js&#39;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">CHANNEL_ID</span> <span class="o">=</span> <span class="s1">&#39;85394&#39;</span>
-
-<span class="nx">App</span><span class="p">.</span><span class="nx">onLaunch</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">evaluateScripts</span><span class="p">([</span><span class="nx">SPOTX_SDK</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">loadAd</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">};</span>
-
-<span class="kd">function</span> <span class="nx">loadAd</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">custom_1</span><span class="o">:</span> <span class="s1">&#39;custom-param&#39;</span>
-  <span class="p">};</span>
-
-  <span class="nx">SpotX</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">CHANNEL_ID</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">player</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">AD_EVENTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AdStarted&#39;</span><span class="p">,</span> <span class="s1">&#39;AdStopped&#39;</span><span class="p">,</span> <span class="s1">&#39;AdError&#39;</span><span class="p">];</span>
-      <span class="nx">AD_EVENTS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">player</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received event: &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
-        <span class="p">});</span>
-      <span class="p">});</span>
-
-      <span class="nx">player</span><span class="p">.</span><span class="nx">standalone</span><span class="p">().</span><span class="nx">play</span><span class="p">();</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</pre></div>
+<h2 id="222">2.2.2<a class="headerlink" href="#222" title="Permanent link">#</a></h2>
+<ul>
+<li>Fixed memory issues.</li>
+<li>Added public function <code>[SpotXView -dispose]</code> to explicitly release WebView resources.</li>
+</ul>
+<h2 id="221">2.2.1<a class="headerlink" href="#221" title="Permanent link">#</a></h2>
+<ul>
+<li>HTTPS fix for <code>mraid.js</code>.</li>
+<li>Added bitcode support.</li>
+<li>Turn off module debug symbols because of Xcode 7.</li>
+</ul>
+<h2 id="220">2.2.0<a class="headerlink" href="#220" title="Permanent link">#</a></h2>
+<ul>
+<li>Add support for <code>end_slate</code> parameter.</li>
+<li>Added <code>device["lang"]</code> to request parameters.</li>
+<li>In-content playback starts when <em>&gt; 50%</em> of the player is in view and stops when <em>&lt; 50%</em>.</li>
+<li>Using new v1 endpoint of <code>mraid.js</code> url.</li>
+</ul>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
@@ -423,7 +405,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../avplayer-sdk/" title="AVPlayer">
+        <a href="../sdk/" title="SDK Quick Start">
           <span class="direction">
             Previous
           </span>
@@ -433,7 +415,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                AVPlayer
+                SDK Quick Start
               </div>
             </div>
           </div>
@@ -442,14 +424,14 @@
     </div>
     <div class="next">
       
-        <a href="../../adapters/mopub/android-adapter/" title="MoPub Android">
+        <a href="../../tvos/avplayer-sdk/" title="AVPlayer">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                MoPub Android
+                AVPlayer
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
