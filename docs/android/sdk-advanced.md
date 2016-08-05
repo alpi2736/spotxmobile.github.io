@@ -15,17 +15,16 @@ You may specify additional parameters to refine your ad request with SpotX. The 
 
 
 ## Do Not Track
-To respect the user's preferences of `Do Not Track` you can set the `device[dnt]` parameter to `"1"` to enable tracking, and `"0"` to NOT track.
+To respect the user's preferences of `Do Not Track` you can set the `device[dnt]` parameter to `"1"` to NOT track, and `"0"` to allow tracking. You can set `Do Not Track` by:
 
-You can set `Do Not Track` by:
-
-1. Include Google Ad Services in your application.  In Android Studio, you can add this dependency by adding the following
+Include Google Ad Services in your application.  In Android Studio, you can add this dependency by adding the following
 to the `build.gradle` file for your app.
 ```
 compile 'com.google.android.gms:play-services-ads:+'
 ```
-2. You must query Google Ad Services to get the status of the *limit tracking* property.  Unfortunately, the query will require
-you to perform the operation on a background thread.  There are many ways to handle this type of operation, and the your implemenation
+
+You must query Google Ad Services to get the status of the *limit tracking* property.  Unfortunately, the query will require
+you to perform the operation on a background thread.  There are many ways to handle this type of operation, and your implementation
 will depend on the design of your app.  Here is a simple example on how to obtain the *limit tracking* property.
 ```java
 private boolean _isLimitTrackingEnabled = true;
@@ -51,7 +50,8 @@ final Context context = this.getApplicationContext();
     }).start();
 }
 ```
-3. Set the `device[dnt]` parameter using the SpotX ad builder, before loading your ads.
+
+Set the `device[dnt]` parameter using the SpotX ad builder, before loading your ads.
 
 ```java
 String doNotTrack = _isLimitTrackingEnabled ? "1" : "0";

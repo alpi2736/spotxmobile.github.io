@@ -1,4 +1,4 @@
-## IAB Categories
+# IAB Categories
 | Parameter | Category |
 | --- | --- |
 | IAB1| Arts & Entertainment|

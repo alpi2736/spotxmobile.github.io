@@ -65,7 +65,7 @@ id<SpotXAdSettings> settings = [SpotX defaultSettings];
 
 // set "Do Not Track", i.e. "device[dnt]" parameter
 ASIdentifierManager *asidManager = [ASIdentifierManager sharedManager];
-settings.trackable = asid.advertisingTrackingEnabled;
+settings.trackable = @(asidManager.advertisingTrackingEnabled);
 
 ...
 ```

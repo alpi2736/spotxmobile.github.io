@@ -63,7 +63,7 @@ Look at the [iOS SDK Advanced Documentation](/ios/sdk-advanced) for more informa
 #import <SpotX/SpotX.h>
 
 @interface ViewController () <SpotXAdDelegate>
-  @property (nonatomic, strong) SpotXAdView *adView;
+  @property (nonatomic, strong) SpotXView *adView;
 @end
 
 @implementation ViewController
@@ -79,6 +79,9 @@ Look at the [iOS SDK Advanced Documentation](/ios/sdk-advanced) for more informa
 		                 domain:@"www.mydomain.com"
 			                url:@"https://itunes.apple.com/us/app/my_app/id123456789"];
 
+    // Set a default Channel ID
+    [SpotX setDefaultChannelID:@"85394"];
+
 	// Optional: Configure default settings
 	id<SpotXAdSettings> settings = [SpotX defaultSettings];
 	settings.useHTTPS = @YES;
@@ -86,7 +89,7 @@ Look at the [iOS SDK Advanced Documentation](/ios/sdk-advanced) for more informa
 
     // Optional: Detect and set "Do Not Track" parameter, i.e. "device[dnt]" parameter
     ASIdentifierManager *asidManager = [ASIdentifierManager sharedManager];
-    settings.trackable = asid.advertisingTrackingEnabled;
+    settings.trackable = @(asidManager.advertisingTrackingEnabled);
 
 	// Optional: Configure default custom parameters (Custom Taxonomy)
 	[SpotX setDefaultParameters:@{
@@ -106,7 +109,7 @@ Look at the [iOS SDK Advanced Documentation](/ios/sdk-advanced) for more informa
 	[self.adView show];
 }
 
-#pragma mark - SpotXAdViewDelegate
+#pragma mark - SpotXAdDelegate
 
 - (void)presentViewController:(UIViewController *)viewControllerToPresent
 {
