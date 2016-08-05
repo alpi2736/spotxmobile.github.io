@@ -13,6 +13,7 @@ pages:
     - Release Notes: 'android/release-notes.md'
   - iOS:
     - SDK Quick Start: 'ios/sdk.md'
+    - Advanced Documentation: 'ios/sdk-advanced.md'
     - Release Notes: 'ios/release-notes.md'
   - Apple tvOS:
     - AVPlayer: 'tvos/avplayer-sdk.md'
@@ -21,6 +22,7 @@ pages:
     - MoPub Android: 'adapters/mopub/android-adapter.md'
     - MoPub iOS: 'adapters/mopub/ios-adapter.md'
     - Brightcove Android: 'adapters/brightcove/android-adapter.md'
+  - IAB Categories: 'iab-categories.md'
 
 theme: material
 
