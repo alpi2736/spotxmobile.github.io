@@ -226,8 +226,8 @@
             </li>
           
             <li class="anchor">
-              <a title="What You Need" href="#what-you-need">
-                What You Need
+              <a title="Before You Begin" href="#before-you-begin">
+                Before You Begin
               </a>
             </li>
           
@@ -245,6 +245,15 @@
           
         </ul>
       
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Advanced Documentation" href="../sdk-advanced/">
+      Advanced Documentation
+    </a>
     
   </li>
 
@@ -325,6 +334,15 @@
   </li>
 
           
+            
+  <li>
+    <a class="" title="IAB Categories" href="../../iab-categories/">
+      IAB Categories
+    </a>
+    
+  </li>
+
+          
         </ul>
         
           <hr>
@@ -350,37 +368,37 @@
         <div class="wrapper">
           
           <h1 id="spotx-ios-sdk-quick-start">SpotX iOS SDK Quick Start<a class="headerlink" href="#spotx-ios-sdk-quick-start" title="Permanent link">#</a></h1>
+<p>Example code and tutorial for displaying SpotX video ads in iOS apps.</p>
+<p>Check out the <a href="https://github.com/spotxmobile/spotx-demo-ios">SpotX Demo App</a> on github for an example app.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p>You&rsquo;ll need to apply to become a SpotX publisher if you haven&rsquo;t already. You&rsquo;ll receive the SpotXchange&rsquo;s SDK, a publisher channel ID, and an account to log in to <a href="https://publisher.spotxchange.com/">SpotXchange&rsquo;s Publisher Tools</a>.</p>
 <ul>
-<li><a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">Apply to become a SpotX Publisher</a></li>
+<li>Minimum iOS version: 7.0</li>
+<li>SpotX publisher account - <a href="http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/">apply to become a publisher</a></li>
 </ul>
-<h2 id="what-you-need">What You Need<a class="headerlink" href="#what-you-need" title="Permanent link">#</a></h2>
-<ul>
-<li>An IAB Category number that best categorizes your app (ex: &ldquo;IAB1&rdquo;)<ul>
-<li><a href="http://www.iab.net/media/file/OpenRTB_API_Specification_Version2.0_FINAL.PDF">IAB Specification</a> (section 6.1 page 54)</li>
-<li><a href="https://gist.github.com/crowdmatt/5040911">IAB Category List</a></li>
-</ul>
+<h2 id="before-you-begin">Before You Begin<a class="headerlink" href="#before-you-begin" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>You&rsquo;ll need to be a SpotX publisher if you aren&rsquo;t already.  You will
+receive  the SpotX SDK, a publisher ID, and an account to log into the <a href="https://publisher.spotxchange.com">SpotX
+Publisher Tools</a>.</p>
 </li>
-<li>Your App domain<ul>
-<li>ex: http://www.example.com</li>
-</ul>
+<li>
+<p>From the Publisher Tools you will be able to create &ldquo;channels&rdquo; that define the
+entry point to connecting with advertisers.  You&rsquo;ll need to create a channel
+before you can use the SDK. Once a channel is created you will be given a
+channel ID and you use this channel ID to integrate with the SDK.</p>
 </li>
-<li>Your App Store URL<ul>
-<li>ex: https://itunes.apple.com/us/app/example/id123456789</li>
-</ul>
-</li>
-<li>Xcode 6</li>
-</ul>
+</ol>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h2>
-<h3 id="installation-with-cocoapods">Installation with CocoaPods<a class="headerlink" href="#installation-with-cocoapods" title="Permanent link">#</a></h3>
+<h3 id="installation-with-cocoapods-recommended">Installation with CocoaPods (recommended)<a class="headerlink" href="#installation-with-cocoapods-recommended" title="Permanent link">#</a></h3>
 <p>Installation with <a href="https://cocoapods.org/">CocoaPods</a> is an alternative to downloading the SDK. CocoaPods is a dependency manager for iOS and Mac apps, which automates and simplifies the process of using 3rd-party libraries in your projects.</p>
+<p>Add the following pod to your <code>Podfile</code>:</p>
 <div class="code"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;SpotX-SDK&#39;</span>
 </pre></div>
 
 
 <h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">#</a></h3>
-<p>Download the latest SDK from the SpotX <a href="https://github.com/spotxmobile/spotx-sdk-ios">Github Repository</a>.</p>
+<p>Download the latest SDK from the SpotX <a href="https://bintray.com/spotxmobile/pods/spotx-sdk-ios/view">Bintray Repository</a>.</p>
 <p>The SpotX SDK makes use of many iOS core frameworks. Add the following frameworks to your app:</p>
 <ul>
 <li>AdManager.framework</li>
@@ -401,56 +419,17 @@
 
 
 <h2 id="using-the-sdk">Using the SDK<a class="headerlink" href="#using-the-sdk" title="Permanent link">#</a></h2>
-<h3 id="initialize-the-spotx-sdk">Initialize the SpotX SDK<a class="headerlink" href="#initialize-the-spotx-sdk" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="c1">// File: AppDelegate.m</span>
-
-<span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
-<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
-
-<span class="k">@implementation</span> <span class="nc">AppDelegate</span>
-
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
-<span class="p">{</span>
-    <span class="c1">// Required: Initialize SpotX SDK</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span> <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span> <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span>
-        <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.spotxchange.com&quot;</span>
-            <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/spotxchange_advertisments/id123456789&quot;</span><span class="p">];</span>
-
-    <span class="c1">// Optional: Set default channel id</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultChannelID</span><span class="p">:</span><span class="s">&quot;110681&quot;</span><span class="p">];</span>
-
-    <span class="c1">// Optional: Configure default settings</span>
-    <span class="kt">id</span><span class="o">&lt;</span><span class="n">SpotXAdSettings</span><span class="o">&gt;</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[</span><span class="n">SpotX</span> <span class="n">defaultSettings</span><span class="p">];</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">useHTTPS</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">useNativeBrowser</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
-    <span class="n">settings</span><span class="p">.</span><span class="n">allowCalendar</span> <span class="o">=</span> <span class="m">@NO</span><span class="p">;</span>
-
-    <span class="c1">// Optional: Configure default custom parameters (Custom Taxonomy)</span>
-    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultParameters</span><span class="p">:</span><span class="l">@{</span>
-        <span class="s">@&quot;custom_param&quot;</span><span class="o">:</span> <span class="s">@&quot;custom_value&quot;</span>
-    <span class="l">}</span><span class="p">];</span>
-
-    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">@end</span>
-</pre></div>
-
-
+<p>Look at the <a href="../../ios/sdk-advanced">iOS SDK Advanced Documentation</a> for more information on settings and parameters.</p>
 <h3 id="show-an-ad">Show an Ad<a class="headerlink" href="#show-an-ad" title="Permanent link">#</a></h3>
 <div class="code"><pre><span></span><span class="c1">// File: ViewController.m</span>
 
+<span class="p">@</span><span class="n">import</span> <span class="n">AdSupport</span><span class="p">;</span>
 <span class="cp">#import &quot;ViewController.h&quot;</span>
-
-<span class="cp">#import &lt;AdManager/SpotX.h&gt;</span>
-
+<span class="cp">#import &lt;SpotX/SpotX.h&gt;</span>
 
 <span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">SpotXAdDelegate</span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">strong</span><span class="p">)</span> <span class="n">SpotXAdView</span> <span class="o">*</span><span class="n">adView</span><span class="p">;</span>
-
+  <span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">strong</span><span class="p">)</span> <span class="n">SpotXView</span> <span class="o">*</span><span class="n">adView</span><span class="p">;</span>
 <span class="k">@end</span>
-
 
 <span class="k">@implementation</span> <span class="nc">ViewController</span>
 
@@ -458,11 +437,34 @@
 <span class="p">{</span>
     <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
 
-    <span class="c1">// NOTE: We create a SpotXView and call -startLoading right away</span>
-    <span class="c1">//       so it is cached when we are ready to show it.</span>
+    <span class="c1">// Required: Initialize the SpotX SDK</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span>
+                       <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span>
+                        <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span>
+                         <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.mydomain.com&quot;</span>
+                            <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/my_app/id123456789&quot;</span><span class="p">];</span>
+
+    <span class="c1">// Set a default Channel ID</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultChannelID</span><span class="p">:</span><span class="s">@&quot;85394&quot;</span><span class="p">];</span>
+
+    <span class="c1">// Optional: Configure default settings</span>
+    <span class="kt">id</span><span class="o">&lt;</span><span class="n">SpotXAdSettings</span><span class="o">&gt;</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[</span><span class="n">SpotX</span> <span class="n">defaultSettings</span><span class="p">];</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">useHTTPS</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">useNativeBrowser</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
+
+    <span class="c1">// Optional: Detect and set &quot;Do Not Track&quot; parameter, i.e. &quot;device[dnt]&quot; parameter</span>
+    <span class="bp">ASIdentifierManager</span> <span class="o">*</span><span class="n">asidManager</span> <span class="o">=</span> <span class="p">[</span><span class="bp">ASIdentifierManager</span> <span class="n">sharedManager</span><span class="p">];</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">trackable</span> <span class="o">=</span> <span class="l">@(</span><span class="n">asidManager</span><span class="p">.</span><span class="n">advertisingTrackingEnabled</span><span class="l">)</span><span class="p">;</span>
+
+    <span class="c1">// Optional: Configure default custom parameters (Custom Taxonomy)</span>
+    <span class="p">[</span><span class="n">SpotX</span> <span class="nl">setDefaultParameters</span><span class="p">:</span><span class="l">@{</span>
+        <span class="s">@&quot;custom_param&quot;</span><span class="o">:</span> <span class="s">@&quot;custom_value&quot;</span>
+    <span class="l">}</span><span class="p">];</span>
+
+    <span class="c1">// Create the SpotXView and start loading an ad</span>
     <span class="n">_adView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SpotXView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
-     <span class="n">_adView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
-     <span class="p">[</span><span class="n">_adView</span> <span class="n">startLoading</span><span class="p">];</span>
+    <span class="n">_adView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">_adView</span> <span class="n">startLoading</span><span class="p">];</span>
 <span class="p">}</span>
 
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showAd</span>
@@ -472,8 +474,7 @@
     <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">adView</span> <span class="n">show</span><span class="p">];</span>
 <span class="p">}</span>
 
-
-<span class="cp">#pragma mark - SpotXAdViewDelegate</span>
+<span class="cp">#pragma mark - SpotXAdDelegate</span>
 
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentViewController:</span><span class="p">(</span><span class="bp">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewControllerToPresent</span>
 <span class="p">{</span>
@@ -482,7 +483,19 @@
 
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adLoaded</span>
 <span class="p">{</span>
-  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Ad is cached and ready to play&quot;</span><span class="p">);</span>
+  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Ad is loaded and ready to play&quot;</span><span class="p">);</span>
+  <span class="p">[</span><span class="nb">self</span> <span class="n">showAd</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adError:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;There was an error with the ad: %@&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adFailedWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+  <span class="c1">// called when there is no ad available or can&#39;t reach ad server</span>
+  <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Ad Failed with error: %@&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">@end</span>
@@ -524,14 +537,14 @@
     </div>
     <div class="next">
       
-        <a href="../release-notes/" title="Release Notes">
+        <a href="../sdk-advanced/" title="Advanced Documentation">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Release Notes
+                Advanced Documentation
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

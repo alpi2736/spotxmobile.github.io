@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Release Notes - SpotX Mobile</title>
+        <title>Advanced Documentation - SpotX Mobile</title>
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/ios/release-notes/">
+        <link rel="canonical" href="https://spotxmobile.github.io/ios/sdk-advanced/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/ios/release-notes/">
+    <meta property="og:url" content="https://spotxmobile.github.io/ios/sdk-advanced/">
     <meta property="og:title" content="SpotX Mobile">
-    <meta property="og:image" content="https://spotxmobile.github.io/ios/release-notes//../../images/logo.png">
+    <meta property="og:image" content="https://spotxmobile.github.io/ios/sdk-advanced//../../images/logo.png">
     <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
             
           </span>
         
-        Release Notes
+        Advanced Documentation
       </div>
     </div>
     
@@ -218,17 +218,8 @@
       
         
   <li>
-    <a class="" title="Advanced Documentation" href="../sdk-advanced/">
+    <a class="current" title="Advanced Documentation" href="./">
       Advanced Documentation
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="current" title="Release Notes" href="./">
-      Release Notes
     </a>
     
       
@@ -238,37 +229,34 @@
         <ul>
           
             <li class="anchor">
-              <a title="2.2.4" href="#224">
-                2.2.4
+              <a title="SpotX Initialize Parameters" href="#spotx-initialize-parameters">
+                SpotX Initialize Parameters
               </a>
             </li>
           
             <li class="anchor">
-              <a title="2.2.3" href="#223">
-                2.2.3
+              <a title="SpotXAdSettings Configuration" href="#spotxadsettings-configuration">
+                SpotXAdSettings Configuration
               </a>
             </li>
           
             <li class="anchor">
-              <a title="2.2.2" href="#222">
-                2.2.2
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="2.2.1" href="#221">
-                2.2.1
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="2.2.0" href="#220">
-                2.2.0
+              <a title="Do Not Track" href="#do-not-track">
+                Do Not Track
               </a>
             </li>
           
         </ul>
       
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Release Notes" href="../release-notes/">
+      Release Notes
+    </a>
     
   </li>
 
@@ -373,38 +361,140 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="release-notes-for-spotx-ios-sdk">Release Notes For SpotX iOS SDK<a class="headerlink" href="#release-notes-for-spotx-ios-sdk" title="Permanent link">#</a></h1>
-<p>Latest version: <code>2.2.4</code> released on <strong>2016-08-04</strong></p>
-<h2 id="224">2.2.4<a class="headerlink" href="#224" title="Permanent link">#</a></h2>
-<ul>
-<li>Updated to new <code>mraid.js</code> url.</li>
-<li>Fixed issue with deal device targeting.</li>
-<li>Removed <code>device[didsha1]</code> and <code>device[dpidsha1]</code> request parameters.</li>
-</ul>
-<h2 id="223">2.2.3<a class="headerlink" href="#223" title="Permanent link">#</a></h2>
-<ul>
-<li>Removed <code>device[ip]</code> and <code>media_transcoding</code> from request parameters.</li>
-<li>Added the <code>X-Device-User-Agent</code> header to all network requests.</li>
-<li>Added <code>device[ua]</code> and <code>preload=0</code> to the request parameters.</li>
-</ul>
-<h2 id="222">2.2.2<a class="headerlink" href="#222" title="Permanent link">#</a></h2>
-<ul>
-<li>Fixed memory issues.</li>
-<li>Added public function <code>[SpotXView -dispose]</code> to explicitly release WebView resources.</li>
-</ul>
-<h2 id="221">2.2.1<a class="headerlink" href="#221" title="Permanent link">#</a></h2>
-<ul>
-<li>HTTPS fix for <code>mraid.js</code>.</li>
-<li>Added bitcode support.</li>
-<li>Turn off module debug symbols because of Xcode 7.</li>
-</ul>
-<h2 id="220">2.2.0<a class="headerlink" href="#220" title="Permanent link">#</a></h2>
-<ul>
-<li>Add support for <code>end_slate</code> parameter.</li>
-<li>Added <code>device["lang"]</code> to request parameters.</li>
-<li>In-content playback starts when <em>&gt; 50%</em> of the player is in view and stops when <em>&lt; 50%</em>.</li>
-<li>Using new v1 endpoint of <code>mraid.js</code> url.</li>
-</ul>
+          <h1 id="spotx-ios-sdk-advanced-documentation">SpotX iOS SDK Advanced Documentation<a class="headerlink" href="#spotx-ios-sdk-advanced-documentation" title="Permanent link">#</a></h1>
+<p>Advanced documentation for SpotX iOS SDK</p>
+<h2 id="spotx-initialize-parameters">SpotX Initialize Parameters<a class="headerlink" href="#spotx-initialize-parameters" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initializeWithApiKey</td>
+<td>not currently used, for future use, so pass in <code>nil</code></td>
+</tr>
+<tr>
+<td>category</td>
+<td>an <a href="../../iab-categories">IAB category</a> key that best fits the app</td>
+</tr>
+<tr>
+<td>section</td>
+<td>the best fit IAB section for the app pulled from a relevant <a href="../../iab-categories">IAB category</a></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>the domain of the app or company</td>
+</tr>
+<tr>
+<td>url</td>
+<td>the URL of the app in the <a href="https://developer.apple.com/library/ios/qa/qa1633/_index.html">App Store</a></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="code"><pre><span></span><span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span>
+                   <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span>
+                    <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span>
+                     <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.mydomain.com&quot;</span>
+                        <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/my_app/id123456789&quot;</span><span class="p">];</span>
+</pre></div>
+
+
+<p>Read more about the OpenRTB <a href="http://www.iab.net/media/file/OpenRTB_API_Specification_Version2.0_FINAL.PDF">IAB Specification v2.0</a> if you&rsquo;re interested.</p>
+<h2 id="spotxadsettings-configuration">SpotXAdSettings Configuration<a class="headerlink" href="#spotxadsettings-configuration" title="Permanent link">#</a></h2>
+<p>All parameters take can be <code>"1"</code> for ON or <code>"0"</code> for OFF; with the exception of <code>endCardDuration</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useHTTPS</td>
+<td>0</td>
+<td>sets all ad requests to use SSL over HTTPS</td>
+</tr>
+<tr>
+<td>useNativeBrowser</td>
+<td>0</td>
+<td>open click-though links in the native Safari browser</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>1</td>
+<td>play the ad without user interaction</td>
+</tr>
+<tr>
+<td>skippable</td>
+<td>0</td>
+<td>allow the ad to skipped by the user</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>0</td>
+<td>request a muted ad if the volume is muted and muted is set</td>
+</tr>
+<tr>
+<td>trackable</td>
+<td>1</td>
+<td>sets the &ldquo;Do Not Track&rdquo; in the ad request. <a href="#do-not-track">Read about how to set &lsquo;dnt&rsquo;</a></td>
+</tr>
+<tr>
+<td>endCardDuration</td>
+<td>0</td>
+<td>number of milliseconds to show an end card after an ad, if available</td>
+</tr>
+<tr>
+<td>allowCalendar</td>
+<td>0</td>
+<td>allow a MRAID ad to set a calendar event</td>
+</tr>
+<tr>
+<td>allowPhone</td>
+<td>0</td>
+<td>allow a MRAID ad to dial a phone number</td>
+</tr>
+<tr>
+<td>allowSMS</td>
+<td>0</td>
+<td>allow a MRAID ad to write a text message</td>
+</tr>
+<tr>
+<td>allowStorage</td>
+<td>0</td>
+<td>allow a MRAID ad to save a file (usually an image)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="do-not-track">Do Not Track<a class="headerlink" href="#do-not-track" title="Permanent link">#</a></h2>
+<p>To respect the user&rsquo;s preferences of <code>Do Not Track</code> you can set the <code>trackable</code> parameter to <code>1</code> to enable tracking, and <code>0</code> to NOT track.</p>
+<p>You can set <code>Do Not Track</code> by:</p>
+<div class="code"><pre><span></span><span class="p">@</span><span class="n">import</span> <span class="n">AdSupport</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="c1">// init SpotX SDK</span>
+<span class="p">[</span><span class="n">SpotX</span> <span class="nl">initializeWithApiKey</span><span class="p">:</span><span class="nb">nil</span>
+                   <span class="nl">category</span><span class="p">:</span><span class="s">@&quot;IAB1&quot;</span>
+                    <span class="nl">section</span><span class="p">:</span><span class="s">@&quot;Fiction&quot;</span>
+                     <span class="nl">domain</span><span class="p">:</span><span class="s">@&quot;www.mydomain.com&quot;</span>
+                        <span class="nl">url</span><span class="p">:</span><span class="s">@&quot;https://itunes.apple.com/us/app/my_app/id123456789&quot;</span><span class="p">];</span>
+
+<span class="c1">// create SpotXAdSettings object</span>
+<span class="kt">id</span><span class="o">&lt;</span><span class="n">SpotXAdSettings</span><span class="o">&gt;</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[</span><span class="n">SpotX</span> <span class="n">defaultSettings</span><span class="p">];</span>
+
+<span class="c1">// set &quot;Do Not Track&quot;, i.e. &quot;device[dnt]&quot; parameter</span>
+<span class="bp">ASIdentifierManager</span> <span class="o">*</span><span class="n">asidManager</span> <span class="o">=</span> <span class="p">[</span><span class="bp">ASIdentifierManager</span> <span class="n">sharedManager</span><span class="p">];</span>
+<span class="n">settings</span><span class="p">.</span><span class="n">trackable</span> <span class="o">=</span> <span class="l">@(</span><span class="n">asidManager</span><span class="p">.</span><span class="n">advertisingTrackingEnabled</span><span class="l">)</span><span class="p">;</span>
+
+<span class="p">...</span>
+</pre></div>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
@@ -423,7 +513,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../sdk-advanced/" title="Advanced Documentation">
+        <a href="../sdk/" title="SDK Quick Start">
           <span class="direction">
             Previous
           </span>
@@ -433,7 +523,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                Advanced Documentation
+                SDK Quick Start
               </div>
             </div>
           </div>
@@ -442,14 +532,14 @@
     </div>
     <div class="next">
       
-        <a href="../../tvos/avplayer-sdk/" title="AVPlayer">
+        <a href="../release-notes/" title="Release Notes">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                AVPlayer
+                Release Notes
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
