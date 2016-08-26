@@ -22,6 +22,9 @@ pages:
     - MoPub Android: 'adapters/mopub/android-adapter.md'
     - MoPub iOS: 'adapters/mopub/ios-adapter.md'
     - Brightcove Android: 'adapters/brightcove/android-adapter.md'
+  - Other Integrations:
+    - MoPub MRAID Creative: 'other-integrations/mopub-mraid-creative.md'
+    - MoPub Rich Media Tag: 'other-integrations/mopub-rich-media.md'
   - IAB Categories: 'iab-categories.md'
   - Immutable Ad Parameters: immutable-ad-params.md
 
