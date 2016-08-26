@@ -9,7 +9,7 @@ By default SpotX will add certain parameters to a search request. If any of thes
 |app[name]|The name of the application using SpotX's SDK.|
 |app[version]|The version of the application using SpotX's SDK.|
 |app[bundle]|The bundle id of the application using SpotX's SDK.|
-|app[uid]|A unique identifier derived from the advertiser id and specific to an app installation used for frequency capping and fraud detection.|
+|app[uid]|An unique identifier derived from the advertiser id and specific to an app installation used for frequency capping and fraud detection.|
 
 ## Device Parameters
 | Parameter | Description |
@@ -29,7 +29,7 @@ By default SpotX will add certain parameters to a search request. If any of thes
 |device[carrier]|The carrier the device is using, this parameter will be empty if the user does not allow the app to access their telephony service.|
 
 !!! note
-The parameters `app[uid]` can be reset by resetting the advertiser id. Here are instructions on how to do this for iOS and Android:
+The parameter `app[uid]` can be reset by resetting the advertiser id. Here are instructions on how to do this for iOS and Android:
 
 ### iOS
 1. Go to Settings > Privacy
