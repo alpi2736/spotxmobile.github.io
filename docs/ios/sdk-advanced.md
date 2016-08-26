@@ -41,6 +41,7 @@ All parameters take can be `"1"` for ON or `"0"` for OFF; with the exception of 
 | allowPhone | 0 | allow a MRAID ad to dial a phone number |
 | allowSMS | 0 | allow a MRAID ad to write a text message |
 | allowStorage | 0 | allow a MRAID ad to save a file (usually an image) |
+| prefetch |0 | Signifies if an ad should be returned in an MRAID request, this parameter is deprecated and defaulted to 0 on the server|
 
 ## Do Not Track
 
