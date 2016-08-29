@@ -41,3 +41,7 @@ img {
 .previous, .next, .footer {
     display: none;
 }
+
+.admonition {
+    background:#1b9dd0;
+}
