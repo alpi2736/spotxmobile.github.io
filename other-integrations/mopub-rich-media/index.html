@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Advanced Documentation - SpotX Mobile</title>
+        <title>MoPub Rich Media Tag - SpotX Mobile</title>
       
       
       
-        <link rel="canonical" href="https://spotxmobile.github.io/android/sdk-advanced/">
+        <link rel="canonical" href="https://spotxmobile.github.io/other-integrations/mopub-rich-media/">
       
       
     
-    <meta property="og:url" content="https://spotxmobile.github.io/android/sdk-advanced/">
+    <meta property="og:url" content="https://spotxmobile.github.io/other-integrations/mopub-rich-media/">
     <meta property="og:title" content="SpotX Mobile">
-    <meta property="og:image" content="https://spotxmobile.github.io/android/sdk-advanced//../../images/logo.png">
+    <meta property="og:image" content="https://spotxmobile.github.io/other-integrations/mopub-rich-media//../../images/logo.png">
     <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -94,12 +94,12 @@
           <span class="path">
             
               
-                Android <i class="icon icon-link"></i>
+                Other Integrations <i class="icon icon-link"></i>
               
             
           </span>
         
-        Advanced Documentation
+        MoPub Rich Media Tag
       </div>
     </div>
     
@@ -173,7 +173,7 @@
       
         
   <li>
-    <a class="" title="SDK Quick Start" href="../sdk/">
+    <a class="" title="SDK Quick Start" href="../../android/sdk/">
       SDK Quick Start
     </a>
     
@@ -182,37 +182,16 @@
       
         
   <li>
-    <a class="current" title="Advanced Documentation" href="./">
+    <a class="" title="Advanced Documentation" href="../../android/sdk-advanced/">
       Advanced Documentation
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Optional Ad Parameters" href="#optional-ad-parameters">
-                Optional Ad Parameters
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Do Not Track" href="#do-not-track">
-                Do Not Track
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
       
         
   <li>
-    <a class="" title="Release Notes" href="../release-notes/">
+    <a class="" title="Release Notes" href="../../android/release-notes/">
       Release Notes
     </a>
     
@@ -329,7 +308,7 @@
       
         
   <li>
-    <a class="" title="MoPub MRAID Creative" href="../../other-integrations/mopub-mraid-creative/">
+    <a class="" title="MoPub MRAID Creative" href="../mopub-mraid-creative/">
       MoPub MRAID Creative
     </a>
     
@@ -338,9 +317,12 @@
       
         
   <li>
-    <a class="" title="MoPub Rich Media Tag" href="../../other-integrations/mopub-rich-media/">
+    <a class="current" title="MoPub Rich Media Tag" href="./">
       MoPub Rich Media Tag
     </a>
+    
+      
+      
     
   </li>
 
@@ -391,93 +373,74 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="spotx-android-sdk-advanced-documentation">SpotX Android SDK Advanced Documentation<a class="headerlink" href="#spotx-android-sdk-advanced-documentation" title="Permanent link">#</a></h1>
-<p>Advanced documentation for SpotX Android SDK</p>
-<h2 id="optional-ad-parameters">Optional Ad Parameters<a class="headerlink" href="#optional-ad-parameters" title="Permanent link">#</a></h2>
-<p>You may specify additional parameters to refine your ad request with SpotX. The values for the following parameters should adhere to the <a href="http://www.iab.com/wp-content/uploads/2015/06/OpenRTBAPISpecificationVersion2_2.pdf">OpenRTB API Specification 2.2</a>.</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app[cat]</td>
-<td>A string of the <a href="../../iab-categories">IAB content categories</a> for the overall application. (e.g. <code>"IAB1"</code>)</td>
-</tr>
-<tr>
-<td>app[privacypolicy]</td>
-<td>Specifies whether the app has a privacy policy. <code>"1"</code> means there is a policy and <code>"0"</code> means there is not.</td>
-</tr>
-<tr>
-<td>app[storeurl]</td>
-<td>For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request. (e.g. <code>"https://play.google.com/store/apps/details?id=com.mydomain.myapp"</code>)</td>
-</tr>
-<tr>
-<td>app[content][language]</td>
-<td>Language of the content. Use <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">alpha-2/ISO 639-1 codes</a> (e.g. <code>"en"</code>).</td>
-</tr>
-<tr>
-<td>app[content][contentrating]</td>
-<td>MPAA Content rating: <code>"G"</code>, <code>"PG"</code>, <code>"PG-13"</code>, <code>"R"</code>, <code>"NC-17"</code></td>
-</tr>
-<tr>
-<td>device[dnt]</td>
-<td>If <code>"1"</code> then tracking is set to true, <code>"0"</code> for false. <a href="#do-not-track">Read more on how to set</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="do-not-track">Do Not Track<a class="headerlink" href="#do-not-track" title="Permanent link">#</a></h2>
-<p>To respect the user&rsquo;s preferences of <code>Do Not Track</code> you can set the <code>device[dnt]</code> parameter to <code>"1"</code> to NOT track, and <code>"0"</code> to allow tracking. You can set <code>Do Not Track</code> by:</p>
-<p>Include Google Ad Services in your application.  In Android Studio, you can add this dependency by adding the following
-to the <code>build.gradle</code> file for your app.</p>
-<div class="code"><pre><span></span>compile &#39;com.google.android.gms:play-services-ads:+&#39;
+            <h1>MoPub Rich Media Tag</h1>
+          
+          <p>SpotX can be integrated with MoPub&rsquo;s Rich Media creative via an EASI integration; this will allow an interstitial ad to be displayed and failover if no ad is returned.  This integration is intended to substitute SpotX&rsquo;s MoPub MRAID Creative for Android since MoPub does not support failover for MRAID interstitials, as described in <a href="http://dev.twitter.com/mopub/network-mediation/custom-network-best-practices">MoPub&rsquo;s documentation</a>. The following is needed to integrate SpotX&rsquo;s EASI with MoPub&rsquo;s Rich Media:</p>
+<ul>
+<li>CSS that centers the creative, <a href="http://dev.twitter.com/mopub-demand/creative-and-ad-formats/ad-markup-and-creative-best-practices">as provided by MoPub</a></li>
+<li>JavaScript that failsover if SpotX did not return an ad</li>
+<li>An EASI tag, <a href="https://www.spotxchange.com/tag-generator/">as provided by SpotX</a></li>
+</ul>
+<p>To get started, follow MoPub&rsquo;s documentation to setup a <a href="https://dev.twitter.com/mopub/ui/rich-media-creative">Rich Media Creative</a>. In the body section of MoPub&rsquo;s Rich Media UI the centering CSS, failover JavaScript, and SpotX EASI tag; an Integration might look like: </p>
+<div class="code"><pre><span></span><span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        html {
+            display: table;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 20px;
+            text-align: center;
+            -webkit-text-size-adjust: none;
+        }
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;spotxvideo&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+        function failover(spotx_ad_found)  {
+            if(!spotx_ad_found)  {
+                loaded=true; 
+                window.location=&quot;mopub://failLoad&quot;
+            }
+        }
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> 
+        <span class="na">src=</span><span class="s">&quot;http://search.spotxchange.com/js/spotx.js&quot;</span> 
+        <span class="na">data-spotx_channel_id=</span><span class="s">&quot;85394&quot;</span> 
+        <span class="na">data-spotx_ad_unit=</span><span class="s">&quot;incontent&quot;</span> 
+        <span class="na">data-spotx_ad_done_function=</span><span class="s">&quot;failover&quot;</span> 
+        <span class="na">data-spotx_content_container_id=</span><span class="s">&quot;spotxvideo&quot;</span> 
+        <span class="na">data-spotx_autoplay=</span><span class="s">&quot;1&quot;</span> 
+        <span class="na">data-spotx_ad_volume=</span><span class="s">&quot;0&quot;</span> 
+        <span class="na">data-spotx_content_width=</span><span class="s">&quot;&quot;</span> 
+        <span class="na">data-spotx_content_height=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </pre></div>
 
 
-<p>You must query Google Ad Services to get the status of the <em>limit tracking</em> property.  Unfortunately, the query will require
-you to perform the operation on a background thread.  There are many ways to handle this type of operation, and your implementation
-will depend on the design of your app.  Here is a simple example on how to obtain the <em>limit tracking</em> property.</p>
-<div class="code"><pre><span></span><span class="kd">private</span> <span class="kt">boolean</span> <span class="n">_isLimitTrackingEnabled</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-<span class="kd">private</span> <span class="kt">void</span> <span class="nf">queryLimitTrackingStatus</span><span class="o">()</span> <span class="o">{</span>
-<span class="kd">final</span> <span class="n">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">getApplicationContext</span><span class="o">();</span>
-
-    <span class="c1">// Unfortunately, the call to obtain the Advertising Info in Google Ad Services</span>
-    <span class="c1">// must not be performed on the main thread</span>
-    <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="k">try</span> <span class="o">{</span>
-                <span class="n">AdvertisingIdClient</span><span class="o">.</span><span class="na">Info</span> <span class="n">info</span> <span class="o">=</span> <span class="n">AdvertisingIdClient</span><span class="o">.</span><span class="na">getAdvertisingIdInfo</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-                <span class="n">_isLimitTrackingEnabled</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="na">isLimitAdTrackingEnabled</span><span class="o">();</span>
-            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">GooglePlayServicesNotAvailableException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">GooglePlayServicesRepairableException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-    <span class="o">}).</span><span class="na">start</span><span class="o">();</span>
-<span class="o">}</span>
-</pre></div>
-
-
-<p>Set the <code>device[dnt]</code> parameter using the SpotX ad builder, before loading your ads.</p>
-<div class="code"><pre><span></span><span class="n">String</span> <span class="n">doNotTrack</span> <span class="o">=</span> <span class="n">_isLimitTrackingEnabled</span> <span class="o">?</span> <span class="s">&quot;1&quot;</span> <span class="o">:</span> <span class="s">&quot;0&quot;</span><span class="o">;</span>
-<span class="c1">// doNotTrack = &quot;1&quot;  -  no tracking</span>
-<span class="c1">// doNotTrack = &quot;0&quot;  -  tracking ok</span>
-
-<span class="n">SpotXAdBuilder</span> <span class="n">adBuilder</span> <span class="o">=</span> <span class="n">SpotX</span><span class="o">.</span><span class="na">newAdBuilder</span><span class="o">(</span><span class="n">channelId</span><span class="o">);</span>
-
-<span class="c1">// set the do not track parameter before loading ads</span>
-<span class="n">adBuilder</span><span class="o">.</span><span class="na">param</span><span class="o">(</span><span class="s">&quot;device[dnt]&quot;</span><span class="o">,</span> <span class="n">doNotTrack</span><span class="o">);</span>
-
-<span class="c1">// execute the ad load</span>
-<span class="n">Future</span><span class="o">&lt;</span><span class="n">SpotXAdGroup</span><span class="o">&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">adBuilder</span><span class="o">.</span><span class="na">loadWithCount</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
-</pre></div>
+<p>It&rsquo;s important to note the following:</p>
+<ul>
+<li>Do not check MoPubs &ldquo;MRAID Ad&rdquo; box, otherwise the failover will not work on Android devices</li>
+<li>These fields are required and <strong>must</strong> be set exactly as shown:<ul>
+<li>data-spotx_ad_unit=&rdquo;incontent&rdquo;</li>
+<li>data-spotx_content_width=&rdquo;&ldquo;</li>
+<li>data-spotx_content_height=&rdquo;&ldquo;</li>
+</ul>
+</li>
+</ul>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
@@ -496,7 +459,7 @@ will depend on the design of your app.  Here is a simple example on how to obtai
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../sdk/" title="SDK Quick Start">
+        <a href="../mopub-mraid-creative/" title="MoPub MRAID Creative">
           <span class="direction">
             Previous
           </span>
@@ -506,7 +469,7 @@ will depend on the design of your app.  Here is a simple example on how to obtai
             </div>
             <div class="stretch">
               <div class="title">
-                SDK Quick Start
+                MoPub MRAID Creative
               </div>
             </div>
           </div>
@@ -515,14 +478,14 @@ will depend on the design of your app.  Here is a simple example on how to obtai
     </div>
     <div class="next">
       
-        <a href="../release-notes/" title="Release Notes">
+        <a href="../../iab-categories/" title="IAB Categories">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Release Notes
+                IAB Categories
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

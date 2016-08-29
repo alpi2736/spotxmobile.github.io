@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>MoPub MRAID Creative - SpotX Mobile</title>
+      
+      
+      
+        <link rel="canonical" href="https://spotxmobile.github.io/other-integrations/mopub-mraid-creative/">
+      
+      
+    
+    <meta property="og:url" content="https://spotxmobile.github.io/other-integrations/mopub-mraid-creative/">
+    <meta property="og:title" content="SpotX Mobile">
+    <meta property="og:image" content="https://spotxmobile.github.io/other-integrations/mopub-mraid-creative//../../images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="SpotX Mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../../images/logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../../images/favicon.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../../css/spotx.css">
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-cyan">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Other Integrations <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        MoPub MRAID Creative
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/spotxmobile" title="@spotxmobile on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../../images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          SpotX Mobile
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Android</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../../android/sdk/">
+      SDK Quick Start
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Advanced Documentation" href="../../android/sdk-advanced/">
+      Advanced Documentation
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Release Notes" href="../../android/release-notes/">
+      Release Notes
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">iOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SDK Quick Start" href="../../ios/sdk/">
+      SDK Quick Start
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Advanced Documentation" href="../../ios/sdk-advanced/">
+      Advanced Documentation
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Release Notes" href="../../ios/release-notes/">
+      Release Notes
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Apple tvOS</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="AVPlayer" href="../../tvos/avplayer-sdk/">
+      AVPlayer
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="TVML" href="../../tvos/tvml-sdk/">
+      TVML
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Adapters</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="MoPub Android" href="../../adapters/mopub/android-adapter/">
+      MoPub Android
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="MoPub iOS" href="../../adapters/mopub/ios-adapter/">
+      MoPub iOS
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Brightcove Android" href="../../adapters/brightcove/android-adapter/">
+      Brightcove Android
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Other Integrations</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="MoPub MRAID Creative" href="./">
+      MoPub MRAID Creative
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Usage" href="#usage">
+                Usage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="SpotMarket MRAID Request Parameters" href="#spotmarket-mraid-request-parameters">
+                SpotMarket MRAID Request Parameters
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Error Handling - MoPub Specific Failover" href="#error-handling-mopub-specific-failover">
+                Error Handling - MoPub Specific Failover
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="MoPub Rich Media Tag" href="../mopub-rich-media/">
+      MoPub Rich Media Tag
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="IAB Categories" href="../../iab-categories/">
+      IAB Categories
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Immutable Ad Parameters" href="../../immutable-ad-params/">
+      Immutable Ad Parameters
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/spotxmobile" target="_blank" title="@spotxmobile on GitHub">
+                  @spotxmobile on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="spotx-mopub-mraid-creative-script">SpotX - MoPub MRAID Creative Script<a class="headerlink" href="#spotx-mopub-mraid-creative-script" title="Permanent link">#</a></h1>
+<p>The SpotX MoPub MRAID creative script should be used to create MRAID creatives in the MoPub interface.
+The <code>mraid.html</code> file in this repository contains the entire script necessary to define a MoPub MRAID creative.
+The script acts as a &ldquo;loader&rdquo;, which will handle making the request to the SpotX network to obtain a
+proper MRAID compliant advertisement.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<p>To use the script, copy the <em>entire</em> text from a script file into the <code>'HTML Body'</code> section
+of the MRAID creative definition.  You may use either version of the script (verbose or minified)
+since the functionality is identical. Review MoPub&rsquo;s <a href="https://dev.twitter.com/mopub/ui/rich-media-creative">documentation</a> for further instruction.</p>
+<blockquote>
+<p>Always make sure to check the <code>'MRAID Ad'</code> option.</p>
+</blockquote>
+<p>To customize the script you should only edit the <code>data-...</code> parameters of the <code>spotx-mopub-mraid</code> script tag.</p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;spotx-mraid-loader&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span>
+    <span class="na">data-channel-id</span><span class="o">=</span><span class="s">&quot;85394&quot;</span>
+    <span class="na">data-request-params</span><span class="o">=</span><span class="s">&quot;app[name]=myapp&amp;app[domain]=myapp.mydomain.com&amp;app[bundle]=com.mydomain.myapp&amp;media_transcoding[]=low&amp;ad_unit=instream&amp;device[devicetype]=1&amp;device[ifa]=%eudid!&amp;device[dnt]=%%DNT%%&amp;cb=%%CACHEBUSTER%%&quot;</span>
+    <span class="na">data-request-timeout</span><span class="o">=</span><span class="s">&quot;8&quot;</span>
+    <span class="na">data-failover-script</span><span class="o">=</span><span class="s">&#39;loaded=true; window.location=&quot;mopub://failLoad&quot;;&#39;</span>
+    <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://m.spotx.tv/mraid/v1/spotx.js&quot;</span>
+<span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-channel-id</code></td>
+<td>The SpotX Channel ID to use for the SpotMarket request.</td>
+</tr>
+<tr>
+<td><code>data-request-params</code></td>
+<td>Name value pairs after the <code>'?'</code> in the SpotMarket request url.</td>
+</tr>
+<tr>
+<td><code>data-request-timeout</code></td>
+<td>The number of seconds to wait for the SpotMarket request to complete.</td>
+</tr>
+<tr>
+<td><code>data-failover-script</code></td>
+<td>The script called when a failover condition occurrs.<br/><br/><strong>Do not modify this parameter</strong>, unless there are changes to the current MoPub MRAID container specification - see the Failover tag section in the MoPub Custom Networks document.</td>
+</tr>
+<tr>
+<td><code>src</code></td>
+<td>The url to the SpotX MRAID <code>spotx.js</code> script file.<br/><br/><strong>Do not modify this parameter</strong>, unless the location or version of the script file changes.</td>
+</tr>
+</tbody>
+</table>
+<p>In the current <code>mraid.html</code> file, you must update the <code>data-channel-id</code> and <code>data-request-params</code> parameters with the proper information.</p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;spotx-mraid-loader&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span>
+  <span class="na">data-channel-id</span><span class="o">=</span><span class="s">&quot;REPLACE_CHANNEL_ID&quot;</span>
+  <span class="na">data-request-params</span><span class="o">=</span><span class="s">&quot;app[name]=REPLACE_ME&amp;app[domain]=REPLACE_ME&amp;app[bundle]=REPLACE_ME&amp;device[devicetype]=1&amp;device[ifa]=%eudid!&amp;device[dnt]=%%DNT%%&amp;cb=%%CACHEBUSTER%%&quot;</span><span class="err">;</span>
+    <span class="err">...</span>
+<span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>You must replace the <code>REPLACE_CHANNEL_ID</code> text with the SpotX Channel ID you want to syndicate, and the <code>REPLACE_ME</code> text
+with the proper values, described in the <a href="#spotmarket-mraid-request-parameters">SpotMarket MRAID Request Parameters</a> section.</p>
+<h2 id="spotmarket-mraid-request-parameters">SpotMarket MRAID Request Parameters<a class="headerlink" href="#spotmarket-mraid-request-parameters" title="Permanent link">#</a></h2>
+<p>The SpotMarket MRAID url contains several parameters (specified in the <code>data-request-params</code> parameter) that must be specified in order to create the proper MRAID response.  When creating the url, you may also use
+macros provided by MoPub for the parameter values.  These macros will be substituted with their corresponding values when the script is obtained by the client&rsquo;s MRAID container.
+For more information about the MoPub Macros, check out the <a href="https://dev.twitter.com/mopub/ui/macros">MoPub Documentation</a>.
+The following table contains the currently supported parameters:</p>
+<h3 id="application-data">Application Data<a class="headerlink" href="#application-data" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description / Example</th>
+<th>Type</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app[name]</code></td>
+<td>Defines the name of the application.<br/><br/><code>app[name]=mygame</code></td>
+<td>String</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>app[domain]</code></td>
+<td>Domain of the application.<br/><br/><code>app[domain]=mygame.foo.com</code></td>
+<td>String</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>app[bundle]</code></td>
+<td>Defines the application bundle or package name. This is intended to be a unique ID across multiple exchanges.<br/><br/><code>app[bundle]=com.foo.mygame</code></td>
+<td>String</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>app[cat]</code></td>
+<td>Array of IAB content categories for the overall application.<sup>1</sup><br/><br/><code>app[cat]=IAB6-8</code></td>
+<td>Array</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>app[storeurl]</code></td>
+<td>For QAG 1.5 compliance, an app store URL for an installed app should be passed in the bid request.<br/><br/><code>app[storeurl]=http%3A%2F%2Fplay.google.com%2Fmygame</code></td>
+<td>String</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>app[ver]</code></td>
+<td>Application version.<br/><br/><code>app[ver]=1.2.1</code></td>
+<td>String</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>app[privacypolicy]</code></td>
+<td>Specifies whether the app has a privacy policy. “1” means there is a policy and “0” means there is not.<br/><br/><code>app[privacypolicy]=1</code></td>
+<td>Integer</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="device-data">Device Data<a class="headerlink" href="#device-data" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description / Example</th>
+<th>Type</th>
+<th>Usage</th>
+<th>MoPub Macro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>device[devicetype]</code></td>
+<td>Defines the type of device being used <sup>1</sup><br/><br/><code>device[devicetype]=1</code></td>
+<td>Integer</td>
+<td>Required</td>
+<td></td>
+</tr>
+<tr>
+<td><code>device[dnt]</code></td>
+<td>If “0”, then do not track Is set to false, if “1”, then do no track is set to true in browser.<br/><br/><code>device[dnt]=%%DNT%%</code></td>
+<td>String</td>
+<td>Required</td>
+<td><code>%%DNT%%</code></td>
+</tr>
+<tr>
+<td><code>device[ifa]</code></td>
+<td>ID sanctioned for advertiser use in the clear, not hashed (i.e., Android Advertising ID or Apple IDFA for iOS).<br/><br/><code>device[ifa]=%eudid!</code></td>
+<td>String</td>
+<td>Required</td>
+<td><code>%eudid!</code><sup>2</sup></td>
+</tr>
+<tr>
+<td><code>device[dpidsha1]</code></td>
+<td>Platform device ID (i.e., Android Device ID); hashed via SHA1. Only use for Android Apps supporting MRAID that do not support Google Play Services.<br/><br/><code>device[dpidsha1]=%eudid!</code></td>
+<td>String</td>
+<td>Optional</td>
+<td><code>%eudid!</code><sup>2</sup></td>
+</tr>
+<tr>
+<td><code>device[geo][lat]</code></td>
+<td>Latitude from -90 to 90. South is negative. This should only be passed if known to be accurate<br/><br/><code>device[geo][lat]=%%LATITUDE%%</code></td>
+<td>Float</td>
+<td>Optional<sup>3</sup></td>
+<td><code>%%LATITUDE%%</code></td>
+</tr>
+<tr>
+<td><code>device[geo][lon]</code></td>
+<td>Longitude from -180 to 180. West is negative. This should only be passed if known to be accurate.<br/><br/><code>device[geo][lon]=%%LONGITUDE%%</code></td>
+<td>Float</td>
+<td>Optional<sup>3</sup></td>
+<td><code>%%LONGITUDE%%</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="site-data">Site Data<a class="headerlink" href="#site-data" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description / Example</th>
+<th>Type</th>
+<th>Usage</th>
+<th>MoPub Macro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cb</code></td>
+<td>Cache Buster - Defines a dynamically generated random number.<br/><br/><code>cb=%%CACHEBUSTER%%</code></td>
+<td>Integer</td>
+<td>Required</td>
+<td><code>%%CACHEBUSTER%%</code></td>
+</tr>
+<tr>
+<td><code>site[cat]</code></td>
+<td>Array of IAB content categories of the site.<sup>1</sup><br/><br/><code>site[cat]=IAB6-8</code></td>
+<td>Array</td>
+<td>Recommended</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><sup>1</sup> The parameter values may be found in the <a href="http://www.iab.com/wp-content/uploads/2015/06/OpenRTBAPISpecificationVersion2_2.pdf">OpenRTB API Specification 2.2</a>.<br/>
+<sup>2</sup> IDFA, Android Advertising ID (if Google Play Services is integrated), or SHA1 Hashed Android Device ID (if Google Play Services is unavailable).  Macro typically used for the <code>device[ifa]</code> parameter.<br/>
+<sup>3</sup> While <code>device[geo][lon]</code> and <code>device[geo][lat]</code> are optional, if either parameter is specified, then the other parameter must be specified.  The substitution of these
+values may not occur if the MRAID container app does not provide location services.</p>
+</blockquote>
+<h3 id="spotx-optional-parameters">SpotX Optional Parameters<a class="headerlink" href="#spotx-optional-parameters" title="Permanent link">#</a></h3>
+<p>The following parameters are specific to the operation of SpotMarket and the Ad player.  These parameters are optional.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description / Example</th>
+<th>Type</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>skippable</code></td>
+<td>Is the advertisement skippable (1 = skippable, 0 or undefined = not skippable).<br/><br/><code>skippable=1</code></td>
+<td>Integer</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>skippable_time</code></td>
+<td>Number of milliseconds from the ad start after which the ad is considered skippable.<br/><br/><code>skippable_time=5000</code></td>
+<td>Integer</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>media_transcoding[]</code></td>
+<td>Media transcoding is provided to Spotmarket as a string or an array of values, with the following 3 options: <code>low</code>, <code>medium</code>, or <code>high</code>. (MRAID requests will default to <code>low</code>)<br/><br/><code>media_transcoding[]=low&amp;media_transcoding[]=medium</code></td>
+<td>String or Array</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>ad_unit</code></td>
+<td>Set the type of ad unit to be used. Can be <code>instream</code>, or <code>incontent</code>.<br/><br/><code>ad_unit=instream</code></td>
+<td>String</td>
+<td>Recommended</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spotx-internal-parameters">SpotX Internal Parameters<a class="headerlink" href="#spotx-internal-parameters" title="Permanent link">#</a></h3>
+<p>There are additional parameters that are custom to SpotX.  These parameters are required, and will be automatically appended to the SpotMarket request url.
+<strong>You should not specify these parameters.</strong>  The details of these parameters are provided here for completeness.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>autoinit</code></td>
+<td>Automatically initialize the MRAID creative and prepare for playback.</td>
+<td><code>autoinit=1</code></td>
+</tr>
+<tr>
+<td><code>autoplay</code></td>
+<td>Automatically begin playing the creative when ready.</td>
+<td><code>autoplay=1</code></td>
+</tr>
+<tr>
+<td><code>prefetch</code></td>
+<td>Fetch the creative on the server, at the time of the request.</td>
+<td><code>prefetch=1</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="error-handling-mopub-specific-failover">Error Handling - MoPub Specific Failover<a class="headerlink" href="#error-handling-mopub-specific-failover" title="Permanent link">#</a></h2>
+<p>MoPub provides a custom failover tag that may be executed in certain error conditions, such as network
+timeout, or no eligible ad available (no fill).  The MRAID script will automatically call the MoPub failover
+tag when these types of errors are detected.</p>
+<p>The failover tag will be called in the following instances:</p>
+<ul>
+<li>SpotMarket request timeout</li>
+<li>Invalid SpotMarket Channel (HTTP 204 error)</li>
+<li>Invalid SpotMarket URL (HTTP 404/403 errors)</li>
+<li>Disabled Channel</li>
+<li>VPAID <em>AdError</em> (for Opt-Out conditions) <sup>4</sup></li>
+</ul>
+<blockquote>
+<p><sup>4</sup> If a VPAID <em>AdError</em> occurs before the VPAID <em>AdImpression</em> event is fired, the failover tag
+will be called.  This situation will typically occur if the MRAID ad contains a VPAID creative that decides
+not to bid on the slot and errors out, before the impression.  If the <em>AdError</em> event occurs after the
+<em>AdImpression</em>, the failover tag will not be issued since the ad impression has already been counted.</p>
+</blockquote>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 SpotXchange, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../adapters/brightcove/android-adapter/" title="Brightcove Android">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Brightcove Android
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../mopub-rich-media/" title="MoPub Rich Media Tag">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                MoPub Rich Media Tag
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
