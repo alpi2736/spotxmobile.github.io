@@ -400,27 +400,27 @@
 <tbody>
 <tr>
 <td>app[ext][spotxsdk][ver]</td>
-<td>The version of SpotX&rsquo;s SDK.</td>
+<td>The version of the installed SpotX SDK.</td>
 </tr>
 <tr>
 <td>app[ext][spotxsdk][name]</td>
-<td>The name of SpotX&rsquo;s SDK (e.g. spotx-sdk-android or spotx-sdk-ios).</td>
+<td>The name of the installed SpotX SDK (e.g. spotx-sdk-android or spotx-sdk-ios).</td>
 </tr>
 <tr>
 <td>app[name]</td>
-<td>The name of the application using SpotX&rsquo;s SDK.</td>
+<td>The name of the application using the SpotX SDK.</td>
 </tr>
 <tr>
 <td>app[version]</td>
-<td>The version of the application using SpotX&rsquo;s SDK.</td>
+<td>The version of the application using the SpotX SDK.</td>
 </tr>
 <tr>
 <td>app[bundle]</td>
-<td>The bundle id of the application using SpotX&rsquo;s SDK.</td>
+<td>The bundle ID of the application using the SpotX SDK.</td>
 </tr>
 <tr>
 <td>app[uid]</td>
-<td>An unique identifier derived from the advertiser id and specific to an app installation used for frequency capping and fraud detection.</td>
+<td>An unique identifier derived from the advertiser ID and specific to an app installation used for frequency capping and fraud detection.</td>
 </tr>
 </tbody>
 </table>
@@ -455,7 +455,7 @@
 </tr>
 <tr>
 <td>device[ifa]</td>
-<td>The device&rsquo;s advertising id.</td>
+<td>The device&rsquo;s advertising ID.</td>
 </tr>
 <tr>
 <td>device[lmt]</td>
@@ -490,7 +490,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
-<p>The parameter <code>app[uid]</code> can be reset by resetting the advertiser id. Here are instructions on how to do this for iOS and Android:</p>
+<p>The parameter <code>app[uid]</code> and <code>device[ifa]</code>can be reset by resetting the advertiser ID. Here are instructions on how to do this for iOS and Android:</p>
 <h3 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">#</a></h3>
 <ol>
 <li>Go to Settings &gt; Privacy</li>
@@ -507,6 +507,7 @@
 <li>Scroll to and select &ldquo;Ads&rdquo;</li>
 <li>Click &ldquo;Reset advertising ID&rdquo;</li>
 </ol>
+<p>If a device has iOS 10 and advertising tracking is unavailable or a device has Android without Google Play services, then to reset <code>app[uid]</code> and <code>device[ifa]</code> the user must clear their app data.</p>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 SpotXchange, Inc. &ndash;
